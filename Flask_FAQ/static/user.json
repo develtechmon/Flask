@@ -1,0 +1,154 @@
+[
+    {
+        "_index": "ticketwikipidea",
+        "_id": "107",
+        "_score": 5.233414,
+        "_source": {
+            "Ticket Number": 63007623,
+            "Process": "XH035",
+            "Customer": "NAITO DENSEI KOGYO",
+            "Subject": "question about xh035",
+            "Description": "Request on gate leakage in DCD",
+            "Topic": "More Device Characterisation",
+            "X-FAB Support": "No gate leakage data (pmos, nmos, nmos_ln) in XH035 but provided characterized data thanks to Suba."
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "118",
+        "_score": 5.233414,
+        "_source": {
+            "Ticket Number": 63007623,
+            "Process": "XH035",
+            "Customer": "NAITO DENSEI KOGYO",
+            "Subject": "question about xh035",
+            "Description": "Request on gate leakage in DCD",
+            "Topic": "More Device Characterisation",
+            "X-FAB Support": "No gate leakage data (pmos, nmos, nmos_ln) in XH035 but provided characterized data thanks to Suba."
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "2",
+        "_score": 5.159601,
+        "_source": {
+            "Ticket Number": 63045889,
+            "Process": "XP018",
+            "Customer": "Astri",
+            "Subject": "support for ESD and latch up DRC",
+            "Description": "request for PDK feature",
+            "Topic": "ESD",
+            "X-FAB Support": null
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "110",
+        "_score": 5.159601,
+        "_source": {
+            "Ticket Number": 63010910,
+            "Process": "XC06",
+            "Customer": "Tian Shui Tian Jia Electronics",
+            "Subject": "which process is integrated with 15kV esd cell?",
+            "Description": "Request on X-FAB process which includes 15KV ESD cell",
+            "Topic": "ESD",
+            "X-FAB Support": "X-FAB I/O Cells are for component level ESD, For system level ESD, recommended XC06, available to modify SCR clamps to meet customer's spec."
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "58",
+        "_score": 4.5762568,
+        "_ignored": [
+            "X-FAB Support.keyword"
+        ],
+        "_source": {
+            "Ticket Number": 63046948,
+            "Process": "XA035",
+            "Customer": "IC'ALPS",
+            "Subject": "compatibility of XH035 analog lib in XA035",
+            "Description": "request for design transfer guideline",
+            "Topic": "Analog cell library",
+            "X-FAB Support": "We don't offer an analog library for XA035 and don't claim compatibility of the XH035 analog library, not even of particular analog cells, with XA035.\nThe XH035 analog cells are mainly characterised for the temperature range up to 85°C, some of them up to 125°C (please refer to information in the XH035 analog cell databook/ datasheets). We have not characterised the XH035 analog cells to the operating temperature range of XA035 (-40 °C to 175 °C), thus according specification data is not\nexisting."
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "87",
+        "_score": 3.24234,
+        "_source": {
+            "Ticket Number": 63048715,
+            "Process": "XH035",
+            "Customer": "Trusted Semiconductor",
+            "Subject": "5V SPRAM",
+            "Description": "Customer is interested and looking for 5V SPRAM IP in XH035. ",
+            "Topic": "RAM/ROM",
+            "X-FAB Support": "Currently, XH035 SPRAM both SP and DP supports only 3.3V and 2.2V ranges. There is no plan to support 5V range."
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "100",
+        "_score": 3.1156793,
+        "_ignored": [
+            "X-FAB Support.keyword"
+        ],
+        "_source": {
+            "Ticket Number": 63040886,
+            "Process": "XH035",
+            "Customer": "Chengdu Acoustic Optics Microelectronics\nTechnology",
+            "Subject": "About thin-film resistor",
+            "Description": "Customer is looking for TaN, SiCR or thin film resistor in XH035.",
+            "Topic": "Design Support",
+            "X-FAB Support": "Have thus far, we do only have an experience with TF resistors, but this is limited only to concept study with no actual development and\ndata characterization data available. There is no dedicated module to implement this device at the moment. To proceed so, COT is required"
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "77",
+        "_score": 2.7691188,
+        "_source": {
+            "Ticket Number": 63048317,
+            "Process": "XH018",
+            "Customer": "ASIC Design",
+            "Subject": "Calibre PERC runsets",
+            "Description": "Customer is looking for Calibre PERC runset as they are doing multi voltage design errors and \nESD failures",
+            "Topic": "Mentor Kit",
+            "X-FAB Support": "Calibre PERC runsets is not offered, however customer is recommended to use ESD design checker utility as an alternative solution."
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "25",
+        "_score": 2.4274619,
+        "_ignored": [
+            "X-FAB Support.keyword"
+        ],
+        "_source": {
+            "Ticket Number": 63046379,
+            "Process": "XH035",
+            "Customer": "Anapex",
+            "Subject": "how to perform LVS on photodiode in OECB gds",
+            "Description": "request for design guideline",
+            "Topic": "Opto / optical sensors",
+            "X-FAB Support": "dlwbn relates to the TUIMP which is part of the CPOD device construction. There is no model or device for these diodes – the only support we have are the layouts in the OECA evaluation chip.\n\nFor LVS, could try the following suggestion by the runset developer, though I have not tested it myself.\nPlace the DIODEF layer around the structures. Then place the recognized devices in a schematic view. Suggest to use virtual connect of all substrate contacts during the LVS run to avoid the multiple stamp connection error. Some structures of the layout are defined only as parasitic diodes. That means this structures are ignored during the LVS comparison. In the extracted netlist are all structures available.\n "
+        }
+    },
+    {
+        "_index": "ticketwikipidea",
+        "_id": "88",
+        "_score": 2.4274619,
+        "_ignored": [
+            "X-FAB Support.keyword"
+        ],
+        "_source": {
+            "Ticket Number": 63048765,
+            "Process": "XH035",
+            "Customer": "Renesas",
+            "Subject": "Migrate design (Schematic and Layout) from iPDK v3 to v6",
+            "Description": "Customer is looking for a way on how to migrate their design from v3 to v6 with relatively low effort. ",
+            "Topic": "Design Flow",
+            "X-FAB Support": "We don't provide it as a service and there is no ready-to-use design migration tools. The earlierst version we had previously dated back to 2010 however, it's not\ncompatible with XENV system. Therefore, customer will need to perform manual migration followed by design re-validation."
+        }
+    }
+]

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Hotline - FAQ</title>
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.1-dist/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons-1.8.1/bootstrap-icons.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/xfab_color.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/user.css"/>
+        <link rel="stylesheet" href="../static/css/style.css"> -->
+
+        <script type="text/javascript" src="http://sp.erf.xfab.de/RandD/DesSup/UploadDocuments/javascript/filter.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" defer></script>
+        
+        <script src="{{ url_for('static', filename='bootstrap-5.0.1-dist/js/bootstrap.bundle.min.js') }}"></script>
+
+
+        <!-- <script src="{{ url_for('static', filename='chartjs-3.3.2-dist/chart.min.js') }}"></script> -->
+
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body style="background-color: #edf2f9;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-xprimary sticky-top">
+            <div class="container-lg">
+                <a class="navbar-brand fs-4" href="{{ url_for('base') }}">Hotline FAQ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link py-0 text-center {{ active_home }}" href="{{ url_for('base') }}">
+                        <div class="text-center">
+                            <i class="bi bi-house-door" style="font-size: 1.3rem;"></i>
+                        </div>
+                        Home
+                    </a>
+                  
+                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('search') }}">
+                        <div class="text-center"><i class="bi bi-arrow-left-right" style="font-size: 1.3rem;"></i></div>
+                        Search
+                    </a>
+
+                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('search') }}">
+                        <div class="text-center"><i class="bi bi-journal-bookmark" style="font-size: 1.3rem;"></i></div>
+                        Entry
+                    </a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link py-0 text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="text-center">
+                                <i class="bi bi-question-circle" style="font-size: 1.3rem;"></i>
+                            </div>
+                            Help
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank" href="/redoc">Documentation</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="/docs">Interactive</a></li>
+                        </ul>
+                    </li>
+
+                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('base') }}">
+                        <div class="text-center"><i class="bi bi-chat-square-dots" style="font-size: 1.3rem;"></i></div>
+                        About
+                    </a>
+                </div>
+            </div>
+
+            </div>
+        </nav>
+
+        <div class="p-3">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 my-5 border-top">
+                <div class="col mb-3">
+                    <a href="/home" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <svg width="114px" height="50px" viewBox="0 0 114 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Logo-White_BG-Petrol" fill="#007A9D">
+                                    <g id="_208013424">
+                                        <path d="M38.1769,41.7402 L38.1769,16.6994 L33.2145,16.6994 L30.3662,16.6994 L33.2145,12.8914 L38.1769,12.8914 L38.1769,10.3526 C38.1769,7.1985 39.1289,4.8329 41.0331,3.2558 C42.9373,1.6787 45.5434,0.8902 48.8517,0.8902 L49.1979,0.8902 L49.1979,4.9868 L48.6209,4.9868 C46.6205,4.9868 45.1011,5.4387 44.0624,6.3426 C43.0238,7.2466 42.5045,8.6986 42.5045,10.6988 L42.5045,12.8914 L45.8512,12.8914 L45.8512,16.6994 L42.5045,16.6994 L42.5045,41.7402 L38.1769,41.7402 Z" id="_208842840"></path>
+                                        <polygon id="_208843368" points="0.6926 41.7402 11.829 26.8542 1.385 12.8914 6.9244 12.8914 14.3679 23.7962 21.7537 12.8914 27.293 12.8914 16.8491 26.8542 35.8641 49.486 30.4038 49.486 14.3679 29.9699 6.1743 41.7402"></polygon>
+                                        <path d="M63.175,42.2216 C60.3669,42.2216 57.9146,41.558 55.8181,40.231 C53.7216,38.9039 52.0964,37.1057 50.9423,34.8363 C49.7882,32.5669 49.2112,30.0666 49.2112,27.3355 C49.2112,24.5661 49.7882,22.0562 50.9423,19.806 C52.0964,17.5558 53.7216,15.7671 55.8181,14.4401 C57.9146,13.1131 60.3669,12.4495 63.175,12.4495 C65.5601,12.4495 67.6084,12.9112 69.3202,13.8343 C71.0321,14.7575 72.4265,16.0076 73.5036,17.5846 L73.5036,12.9112 L77.8313,12.9112 L77.8313,41.76 L73.5036,41.76 L73.5036,37.1441 C72.4265,38.6828 71.0321,39.9137 69.3202,40.8368 C67.6084,41.76 65.5601,42.2216 63.175,42.2216 Z M63.7521,38.2982 C65.9063,38.2982 67.7238,37.7981 69.2048,36.798 C70.6859,35.7979 71.8111,34.4613 72.5804,32.788 C73.3497,31.1147 73.7344,29.2972 73.7344,27.3355 C73.7344,25.3353 73.3497,23.5082 72.5804,21.8543 C71.8111,20.2003 70.6859,18.8733 69.2048,17.8731 C67.7238,16.8731 65.9063,16.373 63.7521,16.373 C61.6363,16.373 59.8091,16.8731 58.2704,17.8731 C56.7316,18.8733 55.5584,20.2003 54.7506,21.8543 C53.9428,23.5082 53.5389,25.3353 53.5389,27.3355 C53.5389,29.2972 53.9428,31.1147 54.7506,32.788 C55.5584,34.4613 56.7316,35.7979 58.2704,36.798 C59.8091,37.7981 61.6363,38.2982 63.7521,38.2982 Z" id="_208013352" fill-rule="nonzero"></path>
+                                        <path d="M99.877,42.2216 C97.492,42.2216 95.4436,41.76 93.7318,40.8368 C92.02,39.9137 90.6255,38.6828 89.5484,37.1441 L89.5484,41.76 L85.2208,41.76 L85.2208,1.3716 L89.5484,1.3716 L89.5484,17.5846 C90.6255,16.0076 92.02,14.7575 93.7318,13.8343 C95.4436,12.9112 97.492,12.4495 99.877,12.4495 C102.6851,12.4495 105.1375,13.1131 107.234,14.4401 C109.3304,15.7671 110.9558,17.5558 112.1098,19.806 C113.2638,22.0562 113.8408,24.5661 113.8408,27.3355 C113.8408,30.0666 113.2638,32.5669 112.1098,34.8363 C110.9558,37.1057 109.3304,38.9039 107.234,40.231 C105.1375,41.558 102.6851,42.2216 99.877,42.2216 Z M99.3,38.2982 C101.4542,38.2982 103.291,37.7981 104.8105,36.798 C106.33,35.7979 107.4936,34.4613 108.3014,32.788 C109.1092,31.1147 109.5131,29.2972 109.5131,27.3355 C109.5131,25.3353 109.1092,23.5082 108.3014,21.8543 C107.4936,20.2003 106.33,18.8733 104.8105,17.8731 C103.291,16.8731 101.4542,16.373 99.3,16.373 C97.1842,16.373 95.3763,16.8731 93.8761,17.8731 C92.3758,18.8733 91.2411,20.2003 90.4716,21.8543 C89.7023,23.5082 89.3176,25.3353 89.3176,27.3355 C89.3176,29.2972 89.7023,31.1147 90.4716,32.788 C91.2411,34.4613 92.3758,35.7979 93.8761,36.798 C95.3763,37.7981 97.1842,38.2982 99.3,38.2982 Z" id="_208013304" fill-rule="nonzero"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="text-muted">
+                        <div>Created with ❤️ and ☕</div>
+                        <div>© 2021-{{ current_year }} X-FAB Global Services GmbH <span class="fw-bold">@DesignSupport</span></div>
+                    </div>
+                </div>
+
+                <div class="col mb-3"></div>
+
+                <div class="col mb-3">
+                    <h5>Navigation</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="{{ url_for('base') }}" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="/redoc" target="_blank" class="nav-link p-0 text-muted">CTS</a></li>
+                        <li class="nav-item mb-2"><a href="{{ url_for('base') }}" class="nav-link p-0 text-muted">Help</a></li>
+                        <li class="nav-item mb-2"><a href="{{ url_for('base') }}" class="nav-link p-0 text-muted">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>About</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/app/about#contact" class="nav-link p-0 text-muted">Contact</a></li>
+                        <li class="nav-item mb-2"><a href="/app/about#release-notes" class="nav-link p-0 text-muted">Release Notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://jira.xfab.ads/browse/DSOT-1501" target="_blank" class="nav-link p-0 text-muted">Report Issue</a></li>
+                    </ul>
+                </div>
+
+            </footer>
+        </div>
+        
+    </body>
+</html>

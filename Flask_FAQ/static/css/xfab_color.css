@@ -1,0 +1,111 @@
+.text-xprimary      { color: #007A9D; }
+.text-xsecondary    { color: #EF783D; }
+.text-xcyan-light   { color: #43B1CD; }
+.text-xcyan         { color: #005B75; }
+.text-xcyan-dark    { color: #003D4E; }
+.text-xorange-light { color: #FDB597; }
+.text-xorange       { color: #8C4123; }
+.text-xorange-dark  { color: #461E00; }
+.text-xdark         { color: #444444; }
+.text-xlight        { color: #767676; }
+
+.fill-xprimary      { fill: #007A9D; }
+.fill-xsecondary    { fill: #EF783D; }
+.fill-xcyan-light   { fill: #43B1CD; }
+.fill-xcyan         { fill: #005B75; }
+.fill-xcyan-dark    { fill: #003D4E; }
+.fill-xorange-light { fill: #FDB597; }
+.fill-xorange       { fill: #8C4123; }
+.fill-xorange-dark  { fill: #461E00; }
+.fill-xdark         { fill: #444444; }
+.fill-xlight        { fill: #767676; }
+
+.alert-xprimary      { color: #003D4E; background-color: #43B1CD; border-color: #007A9D; }
+.alert-xsecondary    { color: #8C4123; background-color: #FDB597; border-color: #EF783D; }
+
+.bg-xprimary      { background-color: #007A9D; }
+.bg-xsecondary    { background-color: #EF783D; }
+.bg-xcyan-light   { background-color: #43B1CD; }
+.bg-xcyan         { background-color: #005B75; }
+.bg-xcyan-dark    { background-color: #003D4E; }
+.bg-xorange-light { background-color: #FDB597; }
+.bg-xorange       { background-color: #8C4123; }
+.bg-xorange-dark  { background-color: #461E00; }
+.bg-xdark         { background-color: #444444; }
+.bg-xlight        { background-color: #767676; }
+
+.badge-xprimary      { background-color: #007A9D; color: #fff; }
+.badge-xsecondary    { background-color: #EF783D; color: #fff; }
+.badge-xcyan-light   { background-color: #43B1CD; color: #fff; }
+.badge-xcyan         { background-color: #005B75; color: #fff; }
+.badge-xcyan-dark    { background-color: #003D4E; color: #fff; }
+.badge-xorange-light { background-color: #FDB597; color: #fff; }
+.badge-xorange       { background-color: #8C4123; color: #fff; }
+.badge-xorange-dark  { background-color: #461E00; color: #fff; }
+.badge-xdark         { background-color: #444444; color: #fff; }
+.badge-xlight        { background-color: #767676; color: #fff; }
+
+.btn-xprimary                                       { background-color: #007A9D; border-color: #007A9D; color: #fff; }
+.btn-xprimary:hover, .btn-xprimary.active           { background-color: #007191; border-color: #007191; color: #fff; }
+.btn-xsecondary                                     { background-color: #EF783D; border-color: #EF783D; color: #fff; }
+.btn-xsecondary:hover, .btn-xsecondary.active       { background-color: #db6e37; border-color: #db6e37; color: #fff; }
+.btn-xcyan-light                                    { background-color: #43B1CD; border-color: #43B1CD; color: #fff; }
+.btn-xcyan-light:hover, .btn-xcyan-light.active     { background-color: #3da0b9; border-color: #3da0b9; color: #fff; }
+.btn-xcyan                                          { background-color: #005B75; border-color: #005B75; color: #fff; }
+.btn-xcyan-dark                                     { background-color: #003D4E; border-color: #003D4E; color: #fff; }
+.btn-xorange-light                                  { background-color: #FDB597; border-color: #FDB597; color: #000; }
+.btn-xorange-light:hover, .btn-xorange-light.active { background-color: #eca98c; border-color: #eca98c; color: #000; }
+.btn-xorange                                        { background-color: #8C4123; border-color: #8C4123; color: #fff; }
+.btn-xorange-dark                                   { background-color: #461E00; border-color: #461E00; color: #fff; }
+.btn-xdark                                          { background-color: #444444; border-color: #444444; color: #fff; }
+.btn-xlight                                         { background-color: #767676; border-color: #767676; color: #fff; }
+
+.btn-outline-xprimary                                               { border-color: #007A9D; color: #007A9D; }
+.btn-outline-xprimary:hover, .btn-outline-xprimary.active           { background-color: #007A9D; border-color: #007A9D; color: #fff; }
+.btn-outline-xsecondary                                             { border-color: #EF783D; color: #EF783D; }
+.btn-outline-xsecondary:hover, .btn-outline-xsecondary.active       { background-color: #EF783D; border-color: #EF783D; color: #fff; }
+.btn-outline-xcyan-light                                            { border-color: #43B1CD; color: #43B1CD; }
+.btn-outline-xcyan-light:hover, .btn-outline-xcyan-light.active     { background-color: #43B1CD; border-color: #43B1CD; color: #fff; }
+.btn-outline-xorange-light                                          { border-color: #FDB597; color: #FDB597; }
+.btn-outline-xorange-light:hover, .btn-outline-xorange-light.active { background-color: #FDB597; border-color: #FDB597; color: #000; }
+
+.link-xprimary                                        { color: #007A9D; }
+.link-xprimary:hover, .link-xprimary.active           { color: #007191; }
+.link-xsecondary                                      { color: #EF783D; }
+.link-xsecondary:hover, .link-xsecondary.active       { color: #db6e37; }
+.link-xcyan-light                                     { color: #43B1CD; }
+.link-xcyan-light:hover, .link-xcyan-light.active     { color: #3da0b9; }
+.link-xorange-light                                   { color: #FDB597; }
+.link-xorange-light:hover, .link-xorange-light.active { color: #eca98c; }
+
+.list-xprimary.active      { background-color: #007191; border-color: #007191; }
+.list-xsecondary.active    { background-color: #db6e37; border-color: #db6e37; }
+.list-xcyan-light.active   { background-color: #3da0b9; border-color: #3da0b9; }
+.list-xorange-light.active { background-color: #eca98c; border-color: #eca98c; }
+
+a.dropdown-item:active {
+    background-color: #007A9D;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #003D4E;
+    background: #FDB597;
+}
+
+::selection {
+    color: #003D4E;
+    background: #FDB597;
+}
+
+code { color: #EF783D; }
+
+/* NOTE: Used for svg images */
+
+.fill-success   { fill: #28a745; }
+.fill-danger    { fill: #dc3545; }
+.fill-warning   { fill: #ffc107; }
+.fill-info      { fill: #17a2b8; }
+.fill-primary   { fill: #007bff; }
+.fill-secondary { fill: #6c757d; }
+.fill-light     { fill: #f8f9fa; }
+.fill-white     { fill: #ffffff; }

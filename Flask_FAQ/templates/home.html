@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1 id="help-website" class="border-bottom fst-italic mb-3">Search</h1>
+            <div class="card p-0">
+                <div class="col">
+                    <div class="col-auto">
+                        <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control  filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col mb-3"></div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card p-0">
+                <div class="row">
+                    <div class="col-auto">
+                        <form action="" method="POST" class="row g-3 p-3">
+                            <div class="col-auto">
+                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Process Family">
+                                    <span class="input-group-text"><i class="bi bi-cpu"></i></span>
+                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
+
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Category">
+                                    <span class="input-group-text"><i class="bi bi-diagram-3-fill"></i></span>
+                                    <input id="SearchField" autocomplete="off" type="text" name="Search"  class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
+
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Tool">
+                                    <span class="input-group-text"><i class="bi bi-tools"></i></span>
+                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
+
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Version Type">
+                                    <span class="input-group-text"><i class="bi bi-flag"></i></span>
+                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white"  placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
+
+                                </div>
+                            </div>
+
+                            <div class="col-auto ">
+                                <input class="btn btn-xprimary btn-sm" id="apply_submit" name="apply_submit" type="submit" value="Apply">
+                                <a class="btn btn-sm btn-secondary" href="{{ url_for('base') }}" role="button"><i class="bi bi-arrow-counterclockwise"></i> Reset</a>
+                            </div>
+        
+                        </form>
+                    </div>
+
+               
+                    <div class="col mx-3 text-end my-auto">
+                        <button class="btn btn-sm btn-outline-xsecondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="bi bi-funnel-fill"></i>
+                            Quickfilter
+                        </button>
+                    </div>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">Quickfilter</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="text-muted">
+                            Choose one of the predefined filters below to play around a bit and quickly find what you're looking for.
+                        </div>
+
+                        <div class="offcanvas-body">
+                            <ol class="list-group">
+                                <a class="list-group-item d-flex justify-content-between align-items-start" href="{{ url_for('base') }}">
+                                <span><i class="bi bi-arrow-right-circle"></i></span>
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Runset released in XH018</div>
+                                </div>
+                                </a>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-borderless table-hover m-0" id="userdata">
+                            <thead class="bg-light border text-center">
+                                <tr>
+                                    <form action="" method="POST">                               
+                                        <th>Ticket</th>
+                                        <th>Process</th>
+                                        <th>Customer</th>
+                                        <th>Subject</th>
+                                        <th>Description</th>
+                                        <th>Topic</th>
+                                        <th>Support</th>
+                                    </form>
+                                </tr>
+                            </thead>
+                            <tbody class="border text-center ">
+                                <td></td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $.getJSON('../static/user.json', function (data) {
+            $.each(data, function (i, f) {
+                // console.log(f._source.Process)
+                var tblRow = "<tr>" + "<td>" + f._source.Process + "</td>" + "<td>" + f._source.Process + "</td>" + "<td>" + f._source.Customer + "</td>" + "<td>" + f._source.Subject + "</td>" + "<td>" + f._source.Description + "</td>" + "<td>" + f._source.Topic + "</td>" + "<td>" + f._source.Support + "</td>" + "</tr>"
+                $(tblRow).appendTo("#userdata tbody");
+            });
+        });
+    });
+</script>
+
+{% endblock %}
+
+<!-- NOTE: Metric cards -->
+<div class="row row-cols-1 row-cols-md-3 g-3 mb-3">
+<div class="col-md-6">
+    <div class="card p-3 h-100" style="background-image: linear-gradient(-45deg, #003D4E, #005B75);">
+        <div class="card-title">
+            <div class="display-5 fw-normal text-xsecondary">
+                <!-- {{ total }} -->
+            </div>
+            <div class="text-light fw-light">
+                <i class="bi bi-search"></i>
+                <!-- {% if res %} -->
+                    <!-- <span>{{ res[0]['_source']['process_family'] }}</span> -->
+                <!-- {% endif %} -->
+                <span>Runsets found</span>
+            </div>
+        </div>
+        <div class="card-body" style="position: relative; height: 150px">
+            <!-- <canvas id="time_chart" x_data="{{ chart_data['x'] | tojson }}" y_data="{{ chart_data['y'] | tojson }}"></canvas> -->
+        </div>
+    </div>
+</div>

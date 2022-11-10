@@ -6,18 +6,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Hotline - FAQ</title>
-
         <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
 
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.1-dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons-1.8.1/bootstrap-icons.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/xfab_color.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" type="text/css" href="../static/css/user.css"/>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        
+        <!-- <link rel="stylesheet" type="text/css" href="../static/css/entry.css"/> -->
+        
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}"> -->
 
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-        <link rel="stylesheet" type="text/css" href="../static/css/user.css"/>
         <link rel="stylesheet" href="../static/css/style.css"> -->
-
+        
         <script type="text/javascript" src="http://sp.erf.xfab.de/RandD/DesSup/UploadDocuments/javascript/filter.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
@@ -26,10 +31,8 @@
         
         <script src="{{ url_for('static', filename='bootstrap-5.0.1-dist/js/bootstrap.bundle.min.js') }}"></script>
 
-
         <!-- <script src="{{ url_for('static', filename='chartjs-3.3.2-dist/chart.min.js') }}"></script> -->
-
-        <link rel="stylesheet" href="">
+        
     </head>
 
     <body style="background-color: #edf2f9;">
@@ -54,7 +57,7 @@
                         Search
                     </a>
 
-                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('search') }}">
+                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('entry') }}">
                         <div class="text-center"><i class="bi bi-journal-bookmark" style="font-size: 1.3rem;"></i></div>
                         Entry
                     </a>
@@ -72,7 +75,7 @@
                         </ul>
                     </li>
 
-                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('base') }}">
+                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('test') }}">
                         <div class="text-center"><i class="bi bi-chat-square-dots" style="font-size: 1.3rem;"></i></div>
                         About
                     </a>

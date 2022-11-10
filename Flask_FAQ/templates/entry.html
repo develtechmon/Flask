@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <div class="testbox">
+      <form action="/">
+        <h1>Pharmacy Complaint Form</h1>
+        <div class="item">
+          <p>Complainant's Name</p>
+          <div class="name-item">
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Address</p>
+          <input type="text" name="name" placeholder="Street address"/>
+          <input type="text" name="name" placeholder="Street address line 2"/>
+          <div class="city-item">
+            <input type="text" name="name" placeholder="City" />
+            <input type="text" name="name" placeholder="Region" />
+            <input type="text" name="name" placeholder="Postal / Zip code" />
+            <select>
+              <option value="">Country</option>
+              <option value="1">Russia</option>
+              <option value="2">Germany</option>
+              <option value="3">France</option>
+              <option value="4">Armenia</option>
+              <option value="5">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="item">
+          <p>Email</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Telephone number where you can be reached</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Incident Date</p>
+          <input type="date" name="name" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>Incident Time</p>
+          <input type="time" name="name" required/>
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="item">
+          <p>What best describes the type of problem encountered</p>
+          <select>
+            <option value="">Please select</option>
+            <option value="1">Dispensing Error</option>
+            <option value="2">Illegal Dispensing</option>
+            <option value="3">Fraud</option>
+            <option value="4">Impairment/Diversion</option>
+            <option value="5">Unethical Conduct</option>
+            <option value="6">Regards Prescriber</option>
+            <option value="6">Other</option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Pharmacy Personnel Involved</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Pharmacy Involved</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Complaint filed on behalf of</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>What happened? Be as specific as possible, including dates, names, etc.</p>
+          <textarea rows="5"></textarea>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">Send Complaint</button>
+        </div>
+      </form>
+    </div>
+  </body>
+{% endblock %}
+
+
+

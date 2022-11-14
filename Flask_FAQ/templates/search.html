@@ -13,9 +13,9 @@
                         <!-- <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control  filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"> -->
                         <div>
                             <!-- <h1>Discover what's out there.</h1> -->
-                            <form  class="flex-form" style="margin: auto;">
+                            <form  class="flex-form" style="margin: auto;" method="post">
                               <label for="from"><i class="ion-location"></i></label>
-                              <input type="search" style="width: 100%" placeholder="Search Keyword Here">
+                              <input type="search" style="width: 100%" placeholder="Search Keyword Here" name="keyword">
                               <!-- <input id="SearchField" autocomplete="off" type="text" name="Search" class="filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"> -->
 
                               <input type="submit" value="Search">
@@ -31,6 +31,8 @@
             </div>
         </div>
     </div>
+
+    <h1>{{data}}</h1>
 
     <div class="col mb-3"></div>
 
@@ -73,7 +75,6 @@
                                 <input class="btn btn-xprimary btn-sm" id="apply_submit" name="apply_submit" type="submit" value="Apply">
                                 <a class="btn btn-sm btn-secondary" href="{{ url_for('base') }}" role="button"><i class="bi bi-arrow-counterclockwise"></i> Reset</a>
                             </div>
-        
                         </form>
                     </div>
 
@@ -121,7 +122,7 @@
                                     </form>
                                 </tr>
                             </thead>
-                            <tbody class="border" style="text-align: left;">
+                            <tbody class="border" style="text-align: left">
                                 <td></td>
                             </tbody>
                         </table>
@@ -134,7 +135,7 @@
 
 <script>
     $(function () {
-        $.getJSON('../static/user.json', function (data) {
+        $.getJSON('../static/json/data.json', function (data) {
             $.each(data, function (i, f) {
                 // console.log(f._source.Process)
                 var tblRow = "<tr>" + "<td>" + f._source.Ticket + "</td>" + "<td>" + f._source.Process + "</td>" + "<td>" + f._source.Customer + "</td>" + "<td>" + f._source.Subject + "</td>" + "<td>" + f._source.Description + "</td>" + "<td>" + f._source.Topic + "</td>" + "<td>" + f._source.Support + "</td>" + "</tr>"

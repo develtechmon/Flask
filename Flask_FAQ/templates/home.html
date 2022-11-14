@@ -37,7 +37,8 @@
     <body style="background-color: #edf2f9;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-xprimary sticky-top">
             <div class="container-lg">
-                <a class="navbar-brand fs-4" href="{{ url_for('base') }}">Hotline FAQ</a>
+                <!-- <a class="navbar-brand fs-4" href="{{ url_for('base') }}">Hotline FAQ</a> -->
+                <img src="../static/img/xabulous-logo.svg" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,9 +57,19 @@
                         Search
                     </a>
 
-                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('search') }}">
+                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('entry') }}">
                         <div class="text-center"><i class="bi bi-journal-bookmark" style="font-size: 1.3rem;"></i></div>
                         Entry
+                    </a>
+
+                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('edit') }}">
+                        <div class="text-center"><i class="bi bi-gear-wide" style="font-size: 1.3rem;"></i></div>
+                        Edit
+                    </a>
+
+                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('upload') }}">
+                        <div class="text-center"><i class="bi bi-folder-plus" style="font-size: 1.3rem;"></i></div>
+                        Upload
                     </a>
 
                     <li class="nav-item dropdown">
@@ -74,7 +85,7 @@
                         </ul>
                     </li>
 
-                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('base') }}">
+                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('test') }}">
                         <div class="text-center"><i class="bi bi-chat-square-dots" style="font-size: 1.3rem;"></i></div>
                         About
                     </a>
@@ -89,12 +100,13 @@
             <div class="container">           
                 <div class="cover">
                   <h1 style="font-size: 400%;">Welcome to Hotline FAQ</h1>
-                  <h1 style="font-size: 150%; font-weight: 200;">What are you looking for ?</h1>
-                  <!-- <form  class="flex-form">
+                  <h1 style="font-size: 150%; font-weight: 700; text-decoration: overline;">Begin Your Search Here</h1>
+                  <!-- <img src="../static/img/xabulous-logo.svg" width="700" height="600"/> -->
+                  <form  class="flex-form" method="post">
                     <label for="from"><i class="ion-location"></i></label>
-                    <input type="search" placeholder="Welcome to Hotline FAQ">
+                    <input type="search" placeholder="Type keywords to find answers ?" name="keyword">
                     <input type="submit" value="Search">
-                  </form> -->
+                  </form>
                   <div id="madeby">
                     <span>
                       <!-- Photo by <a href="https://unsplash.com/@benblenner" target="_blank">Ben Blennerhassett</a> -->

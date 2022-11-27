@@ -1,1 +1,114 @@
-[{"_index": "hotlinefaq", "_id": "1", "_score": 4.283555, "_source": {"Ticket": "00", "Process": "xt018", "Customer": "lukas", "Subject": "esd", "Description": "guideline", "Topic": "esd clamp", "Support": "refer to guideline"}}, {"_index": "hotlinefaq", "_id": "VOf1dIQBGawFw3wYIqVn", "_score": 4.283555, "_source": {"Ticket": "00", "Process": "xt018", "Customer": "lukas", "Subject": "esd", "Topic": "esd clamp", "Description": "guideline", "Support": "refer to guideline"}}, {"_index": "hotlinefaq", "_id": "Vef1dIQBGawFw3wYmqVc", "_score": 4.283555, "_source": {"Ticket": "00", "Process": "xt018", "Customer": "james", "Subject": "esd", "Topic": "esd clamp", "Description": "guideline", "Support": "refer to guideline"}}, {"_index": "hotlinefaq", "_id": "VucMdYQBGawFw3wYeqWK", "_score": 4.283555, "_source": {"Ticket": "00", "Process": "xt018", "Customer": "james", "Subject": "esd", "Topic": "esd clamp", "Description": "guideline", "Support": "refer to guideline"}}, {"_index": "hotlinefaq", "_id": "2", "_score": 3.7336154, "_source": {"Ticket": 63045889, "Process": "XP018", "Customer": "Astri", "Subject": "support for ESD and latch up DRC", "Description": "request for PDK feature", "Topic": "ESD", "Support": null}}, {"_index": "hotlinefaq", "_id": "110", "_score": 3.7336154, "_source": {"Ticket": 63010910, "Process": "XC06", "Customer": "Tian Shui Tian Jia Electronics", "Subject": "which process is integrated with 15kV esd cell?", "Description": "Request on X-FAB process which includes 15KV ESD cell", "Topic": "ESD", "Support": "X-FAB I/O Cells are for component level ESD, For system level ESD, recommended XC06, available to modify SCR clamps to meet customer's spec."}}, {"_index": "hotlinefaq", "_id": "V-cqdYQBGawFw3wYpaUy", "_score": 3.7336154, "_source": {"Ticket": "123", "Process": "xt018", "Customer": "test", "Subject": "test2", "Topic": "esd", "Description": "esd support", "Support": "given the guideline"}}, {"_index": "hotlinefaq", "_id": "77", "_score": 1.7870605, "_source": {"Ticket": 63048317, "Process": "XH018", "Customer": "ASIC Design", "Subject": "Calibre PERC runsets", "Description": "Customer is looking for Calibre PERC runset as they are doing multi voltage design errors and \nESD failures", "Topic": "Mentor Kit", "Support": "Calibre PERC runsets is not offered, however customer is recommended to use ESD design checker utility as an alternative solution."}}]
+[
+    {
+        "_index": "hotlinefaq",
+        "_id": "1",
+        "_score": 4.283555,
+        "_source": {
+            "Ticket": "00",
+            "Process": "xt018",
+            "Customer": "lukas",
+            "Subject": "esd",
+            "Description": "guideline",
+            "Topic": "esd clamp",
+            "Support": "refer to guideline"
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "VOf1dIQBGawFw3wYIqVn",
+        "_score": 4.283555,
+        "_source": {
+            "Ticket": "00",
+            "Process": "xt018",
+            "Customer": "lukas",
+            "Subject": "esd",
+            "Topic": "esd clamp",
+            "Description": "guideline",
+            "Support": "refer to guideline"
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "Vef1dIQBGawFw3wYmqVc",
+        "_score": 4.283555,
+        "_source": {
+            "Ticket": "00",
+            "Process": "xt018",
+            "Customer": "james",
+            "Subject": "esd",
+            "Topic": "esd clamp",
+            "Description": "guideline",
+            "Support": "refer to guideline"
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "VucMdYQBGawFw3wYeqWK",
+        "_score": 4.283555,
+        "_source": {
+            "Ticket": "00",
+            "Process": "xt018",
+            "Customer": "james",
+            "Subject": "esd",
+            "Topic": "esd clamp",
+            "Description": "guideline",
+            "Support": "refer to guideline"
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "2",
+        "_score": 3.7336154,
+        "_source": {
+            "Ticket": 63045889,
+            "Process": "XP018",
+            "Customer": "Astri",
+            "Subject": "support for ESD and latch up DRC",
+            "Description": "request for PDK feature",
+            "Topic": "ESD",
+            "Support": null
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "110",
+        "_score": 3.7336154,
+        "_source": {
+            "Ticket": 63010910,
+            "Process": "XC06",
+            "Customer": "Tian Shui Tian Jia Electronics",
+            "Subject": "which process is integrated with 15kV esd cell?",
+            "Description": "Request on X-FAB process which includes 15KV ESD cell",
+            "Topic": "ESD",
+            "Support": "X-FAB I/O Cells are for component level ESD, For system level ESD, recommended XC06, available to modify SCR clamps to meet customer's spec."
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "V-cqdYQBGawFw3wYpaUy",
+        "_score": 3.7336154,
+        "_source": {
+            "Ticket": "123",
+            "Process": "xt018",
+            "Customer": "test",
+            "Subject": "test2",
+            "Topic": "esd",
+            "Description": "esd support",
+            "Support": "given the guideline"
+        }
+    },
+    {
+        "_index": "hotlinefaq",
+        "_id": "77",
+        "_score": 1.7870605,
+        "_source": {
+            "Ticket": 63048317,
+            "Process": "XH018",
+            "Customer": "ASIC Design",
+            "Subject": "Calibre PERC runsets",
+            "Description": "Customer is looking for Calibre PERC runset as they are doing multi voltage design errors and \nESD failures",
+            "Topic": "Mentor Kit",
+            "Support": "Calibre PERC runsets is not offered, however customer is recommended to use ESD design checker utility as an alternative solution."
+        }
+    }
+]

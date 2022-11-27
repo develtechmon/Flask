@@ -1,0 +1,36 @@
+.bg-holder {
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    /* opacity: 0.5; */
+}
+
+.dot {
+    width: .625rem;
+    height: .635rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.fs--1 {
+    font-size: .8333333333rem !important;
+}
+
+.fs--2 {
+    font-size: .6944444444rem !important;
+}
+
+.hr-w-text {
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #dedede;
+    text-align: center;
+}
+
+.hr-w-text > span {
+    font-size: 1.2rem;
+    background-color: #FFF;
+    padding: 0 30px;
+    color: #707070;
+}

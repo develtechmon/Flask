@@ -67,15 +67,10 @@
                             Doc
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" target="_blank" href="{{ url_for('entry') }}"> New FAQ Entry</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="{{ url_for('edit') }}">Edit FAQ</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="{{ url_for('search') }}"> New FAQ Entry</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="{{ url_for('search') }}">Edit FAQ</a></li>
                         </ul>
                     </li>
-
-                    <a class="nav-link py-0 text-center {{ active_help }}" href="{{ url_for('upload') }}">
-                        <div class="text-center"><i class="bi bi-folder-plus" style="font-size: 1.3rem;"></i></div>
-                        Upload
-                    </a>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link py-0 text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,7 +85,7 @@
                         </ul>
                     </li>
 
-                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('test') }}">
+                    <a class="nav-link py-0 text-center {{ active_about }}" href="{{ url_for('search') }}">
                         <div class="text-center"><i class="bi bi-chat-square-dots" style="font-size: 1.3rem;"></i></div>
                         About
                     </a>

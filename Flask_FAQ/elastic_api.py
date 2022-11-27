@@ -70,7 +70,6 @@ class elastic:
         jsonFile.write(jsonString)
         jsonFile.close()
         
-    
     def search_and(self,data):
         print("AND")
         # See Link https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/examples.html
@@ -142,7 +141,7 @@ if __name__ == "__main__":
     init = elastic()
     init.connect()
     
-    init.search('"XP018" "ESD"')
+    #init.search('"XP018" "ESD"')
     
     #init.search_and("XR013")
     

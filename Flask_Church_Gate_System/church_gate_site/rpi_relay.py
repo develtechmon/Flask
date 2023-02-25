@@ -9,6 +9,10 @@ def rpi_relay(state):
 
     # Pause and Close the gate
     GPIO.setup(15,GPIO.OUT)
+    
+    GPIO.output(14, GPIO.LOW)
+    GPIO.output(15, GPIO.LOW)
+    
     print(state)
     try:
         if state == "open":

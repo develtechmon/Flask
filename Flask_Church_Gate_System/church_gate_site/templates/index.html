@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upright</title>
+    <title>TechMon</title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
-    
-
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/-->  
     <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">  <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick.min.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick-theme.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
     <script>
         if ( window.history.replaceState ) {
@@ -783,13 +782,14 @@ https://templatemo.com/tm-555-upright
             </div> <!-- .tm-main -->                      
         </div> <!-- .row -->
     </div> <!-- .container-fluid -->
-    <script src="js/jquery-3.4.1.min.js"></script>          <!-- https://jquery.com/ -->
-    <script src="js/jquery.singlePageNav.min.js"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
-    <script src="js/parallax/parallax.min.js"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
-    <script src="js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ -->
-    <script src="js/isotope.pkgd.min.js"></script>          <!-- https://isotope.metafizzy.co/ -->
-    <script src="js/jquery.magnific-popup.min.js"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
-    <script src="slick/slick.min.js"></script>              <!-- https://kenwheeler.github.io/slick/ -->
-    <script src="js/templatemo-script.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>          <!-- https://jquery.com/ -->
+    <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
+    <script src="{{ url_for('static', filename='js/parallax/parallax.min.js') }}"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>     <!-- https://imagesloaded.desandro.com/ -->
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>          <!-- https://isotope.metafizzy.co/ -->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>              <!-- https://kenwheeler.github.io/slick/ -->
+    <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
+
 </body>
 </html> 

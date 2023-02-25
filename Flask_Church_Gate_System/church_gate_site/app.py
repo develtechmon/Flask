@@ -27,10 +27,10 @@ def update_data(key):
     # for key,value in data.items():
     #     print(key)
     
-    print(key)
+    #print(key)
     rpi_relay(key)
 
     return render_template('index.html')   
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='192.168.195.230', port=80, threaded=True)

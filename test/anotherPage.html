@@ -1,0 +1,40 @@
+<table id="myTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Bob</td>
+        <td>40</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+// Get the row index parameter from the URL
+var urlParams = new URLSearchParams(window.location.search);
+var rowIndex = parseInt(urlParams.get("rowIndex"));
+
+// Get a reference to the table element
+var table = document.getElementById("myTable");
+
+// Select the row with the corresponding index
+var row = table.rows[rowIndex];
+row.classList.add("selected");
+
+  </script>

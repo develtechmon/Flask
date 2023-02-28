@@ -175,25 +175,83 @@
                                                                                     <i class="bi bi-three-dots-vertical"></i>
                                                                                 </button>
                                                                                 <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton-DS-Runset-Index">
-                                                                                    <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-window-plus me-2"></i>Open</a></li>
-                                                                                    <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-pencil-square me-2"></i>Edit</a></li>
+                                                                                    <!-- <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-window-plus me-2"></i>Open</a></li> -->
+                                                                                    <!-- <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-pencil-square me-2"></i>Edit</a></li> -->
+                                                                                    
+                                                                                    <li><a  class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-window-plus me-2"></i>Open</a></li>
+                                                                                    <li><a  class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-pencil-square me-2"></i>Edit</a></li>
                                                                                     <li><hr class="dropdown-divider"></li>
-                                                                                    <li><a class="dropdown-item px-2 rounded-2 text-danger" name="DS Runset Index" doc_id="ES9R8XkBGTDD8zyIUsiF" onclick="setDocId(this)" data-bs-toggle="modal" data-bs-target="#pwConfirmModal"><i class="bi bi-trash me-2"></i>Delete</a></li>
+                                                                                    <li><a  class="dropdown-item px-2 rounded-2 text-danger" name="DS Runset Index" doc_id="ES9R8XkBGTDD8zyIUsiF" onclick="setDocId()" data-bs-toggle="modal" data-bs-target="#pwConfirmModal"><i class="bi bi-trash me-2"></i>Delete</a></li>
+                                                                                    <li id="test"><a  class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-window-plus me-2"></i>test</a></li>
+                                                                                    <!-- <td id="test"><button>asd</button></td> -->
                                                                                 </ul>
-                                                                                <script>
-                                                                                    function setDocId(self) {
-                                                                                        document.getElementById('ticket').value = self.getAttribute('doc_id')
-                                                                                        document.getElementById('process').value = self.getAttribute('name')
-                                                                                        document.getElementById('subject').innerText = self.getAttribute('name')
-                                                                                    }
-                                                                                </script>
-                                                                            </div>
-                                                                
+                                                                            </div>                                   
                                                                         </td>                                                               
                                                                 </tr>
                                                                 {% endfor %}
                                                             </tbody>
                                                         </table>
+                                                        
+                                                        <script>
+                                  
+                                                        // var table = document.getElementById("userdata");
+                                                        // var buttons = document.getElementById("test").querySelectorAll("button");
+                                                        // buttons.forEach(function(button) {
+                                                        // button.addEventListener("click", function(event) {
+                                                        //     var row = event.target.parentNode.parentNode;
+                                                        //     var name = row.cells[0].textContent;
+                                                        //     var age = row.cells[1].textContent;
+                                                            
+                                                        //     // Do something with the data
+                                                        //     console.log("Name: " + name);
+                                                        //     console.log("Age: " + age);
+                                                        // });
+                                                        // });
+                                                        
+                                                        // This function to select data from table cell
+                                                        function opendatax(){
+
+                                                        // Get a reference to the table element
+                                                        var table = document.getElementById("userdata");
+
+                                                        // Add a click event listener to the table
+                                                        table.addEventListener("click", function(event) {
+                                                        
+                                                            // Check if the clicked element is a table cell
+                                                        if (event.target.tagName === "TD") {
+                                                            // Get the row data of the clicked cell
+                                                            var tickets = [];
+                                                            var process = [];
+                                                            var subject = [];
+                                                            var cells = event.target.parentElement.cells;
+
+                                                            //Here we iterate one time only from the cells column
+                                                            for (var i = 0; i < 1; i++) 
+                                                            {
+                                                            // rowData.push(cells[i].textContent);
+                                                            tickets.push(cells[0].textContent);
+                                                            process.push(cells[1].textContent);
+                                                            subject.push(cells[2].textContent);
+                                                            }
+
+                                                            var data = {
+                                                                tickets: tickets,
+                                                                process: process,
+                                                                subject: subject
+                                                            };
+                                                            
+                                                            // Convert the row data to JSON
+                                                            var json = JSON.stringify(data);
+                                                            
+                                                            // Do something with the JSON data
+                                                            console.log(json);
+                                                        }
+                                                        }
+                                                        )}
+
+                                                        
+                                                        </script>
+
                                                     </div>
                                                 </div>
                                             </div>

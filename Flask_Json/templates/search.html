@@ -1,173 +1,204 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container">
+    <div class="container">
 
-    <div class="row">
-        <div class="col">
-            <h1 id="help-website" class="border-bottom mb-3" style="text-align: center; color:#005B75; font-family: 'Lato', sans-serif;">Search Your Information Here</h1>
-            <!-- <div class="card p-0"> -->
-            <div>
-                <div class="col">
-                    <div class="col-auto">
-                        <!-- <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control  filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"> -->
-                        <div>
-                            <!-- <h1>Discover what's out there.</h1> -->
-                            <form  class="flex-form" style="margin: auto;" method="post">
-                              <label for="from"><i class="ion-location"></i></label>
-                              <input type="search" style="width: 100%" placeholder="Search Keyword Here" name="keyword">
-                              <!-- <input id="SearchField" autocomplete="off" type="text" name="Search" class="filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"> -->
+        <div class="row">
+            <div class="col">
+                <h1 id="help-website" class="border-bottom mb-3" style="text-align: center; color:#005B75; font-family: 'Lato', sans-serif;">Search Your Information Here</h1>
+                <!-- <div class="card p-0"> -->
+                <div>
+                    <div class="col">
+                        <div
+                            class="col-auto">
+                            <!-- <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control  filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"> -->
+                            <div>
+                                <!-- <h1>Discover what's out there.</h1> -->
+                                <form class="flex-form" style="margin: auto;" method="post">
+                                    <label for="from">
+                                        <i class="ion-location"></i>
+                                    </label>
+                                    <input
+                                        type="search" style="width: 100%" placeholder="Search Keyword Here" name="keyword">
+                                        <!-- <input id="SearchField" autocomplete="off" type="text" name="Search" class="filled-input bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"> -->
 
-                              <input type="submit" value="Search">
-                            </form>
-                            <div id="madeby">
-                              <span>
-                                <!-- Contact <a href="" target="_blank">Hotline</a> -->
-                              </span>
+                                        <input type="submit" value="Search"></form>
+                                        <div id="madeby">
+                                            <span>
+                                                <!-- Contact <a href="" target="_blank">Hotline</a> -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <h1>{{data}}</h1>
+                <h1>{{ data }}</h1>
 
-    <div class="col mb-3"></div>
+                <div class="col mb-3"></div>
 
-    <div class="row">
-        <div class="col">
-            <div class="card p-0">
                 <div class="row">
-                    <div class="col-auto">
-                        <form action="" method="POST" class="row g-3 p-3">
-                            <div class="col-auto">
-                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Process Family">
-                                    <span class="input-group-text"><i class="bi bi-cpu"></i></span>
-                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
+                    <div class="col">
+                        <div class="card p-0">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <form action="" method="POST" class="row g-3 p-3">
+                                        <div class="col-auto">
+                                            <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Process Family">
+                                                <span class="input-group-text">
+                                                    <i class="bi bi-cpu"></i>
+                                                </span>
+                                                <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"></div>
+
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Category">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-diagram-3-fill"></i>
+                                                    </span>
+                                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"></div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Tool">
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-tools"></i>
+                                                        </span>
+                                                        <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"></div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Version Type">
+                                                            <span class="input-group-text">
+                                                                <i class="bi bi-flag"></i>
+                                                            </span>
+                                                            <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()"></div>
+                                                        </div>
+
+                                                        <div class="col-auto ">
+                                                            <input class="btn btn-xprimary btn-sm" id="apply_submit" name="apply_submit" type="submit" value="Apply">
+                                                                <a class="btn btn-sm btn-secondary" href="{{ url_for('base') }}" role="button">
+                                                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                                                    Reset</a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+
+                                                    <div class="col mx-3 text-end my-auto">
+                                                        <button class="btn btn-sm btn-outline-xsecondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                                            <i class="bi bi-funnel-fill"></i>
+                                                            Quickfilter
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                                        <div class="offcanvas-header">
+                                                            <h5 id="offcanvasRightLabel">Quickfilter</h5>
+                                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="text-muted">
+                                                            Choose one of the predefined filters below to play around a bit and quickly find what you're looking for.
+                                                        </div>
+
+                                                        <div class="offcanvas-body">
+                                                            <ol class="list-group">
+                                                                <a class="list-group-item d-flex justify-content-between align-items-start" href="{{ url_for('base') }}">
+                                                                    <span>
+                                                                        <i class="bi bi-arrow-right-circle"></i>
+                                                                    </span>
+                                                                    <div class="ms-2 me-auto">
+                                                                        <div class="fw-bold">Runset released in XH018</div>
+                                                                    </div>
+                                                                </a>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="table-responsive">
+                                                        <table class="table table-borderless table-hover m-0" id="userdata"">
+                                                            <thead class="border text-center" style="color: white;">
+                                                                <tr>
+                                                                    <form action="" method="POST">
+                                                                        <th>Ticket</th>
+                                                                        <th>Process</th>
+                                                                        <th>Subject</th>
+                                                                        <th>Question</th>
+                                                                        <th>Topic</th>
+                                                                        <th>Answer</th>
+                                                                        <th></th>
+                                                                    </form>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody >
+                                                                {% for i in range(0,all) %}
+                                                                <tr style="text-align: justify;">
+                                                                        <td >
+                                                                            {% if res %}
+                                                                                <span id="ticket">{{ res[i]['_source']['Ticket'] }}</span>
+                                                                            {% endif %}
+                                                                        </td>
+
+                                                                        <td >
+                                                                            {% if res %}
+                                                                                <span id="process">{{ res[i]['_source']['Process'] }}</span>
+                                                                            {% endif %}
+                                                                        </td>
+
+                                                                        <td >
+                                                                            {% if res %}
+                                                                                <span id="subject">{{ res[i]['_source']['Subject'] }}</span>
+                                                                            {% endif %}
+                                                                        </td>
+
+                                                                        <td >
+                                                                            {% if res %}
+                                                                                <span id="description">{{ res[i]['_source']['Description'] }}</span>
+                                                                            {% endif %}
+                                                                        </td>
+
+                                                                        <td >
+                                                                            {% if res %}
+                                                                                <span id="topic">{{ res[i]['_source']['Topic'] }}</span>
+                                                                            {% endif %}
+                                                                        </td>
+
+                                                                        <td >
+                                                                            {% if res %}
+                                                                                <span id="support">{{ res[i]['_source']['Support'] }}</span>
+                                                                            {% endif %}
+                                                                        </td>
+
+                                                                        <td class='border-bottom'>                                                                   
+                                                                            <div class="dropdown dropstart">
+                                                                                <button class="btn btn-sm btn-link link-dark" type="button" id="dropdownMenuButton-DS-Runset-Index" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                                                </button>
+                                                                                <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton-DS-Runset-Index">
+                                                                                    <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-window-plus me-2"></i>Open</a></li>
+                                                                                    <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-pencil-square me-2"></i>Edit</a></li>
+                                                                                    <li><hr class="dropdown-divider"></li>
+                                                                                    <li><a class="dropdown-item px-2 rounded-2 text-danger" name="DS Runset Index" doc_id="ES9R8XkBGTDD8zyIUsiF" onclick="setDocId(this)" data-bs-toggle="modal" data-bs-target="#pwConfirmModal"><i class="bi bi-trash me-2"></i>Delete</a></li>
+                                                                                </ul>
+                                                                                <script>
+                                                                                    function setDocId(self) {
+                                                                                        document.getElementById('ticket').value = self.getAttribute('doc_id')
+                                                                                        document.getElementById('process').value = self.getAttribute('name')
+                                                                                        document.getElementById('subject').innerText = self.getAttribute('name')
+                                                                                    }
+                                                                                </script>
+                                                                            </div>
+                                                                
+                                                                        </td>                                                               
+                                                                </tr>
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                            </div>
-                            <div class="col-auto">
-                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Category">
-                                    <span class="input-group-text"><i class="bi bi-diagram-3-fill"></i></span>
-                                    <input id="SearchField" autocomplete="off" type="text" name="Search"  class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
-
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Tool">
-                                    <span class="input-group-text"><i class="bi bi-tools"></i></span>
-                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white" placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
-
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="input-group input-group-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Version Type">
-                                    <span class="input-group-text"><i class="bi bi-flag"></i></span>
-                                    <input id="SearchField" autocomplete="off" type="text" name="Search" class="form-control bg-white"  placeholder="Search Keyword Here" onkeydown="checkKey(event)" oninput="setFilter()">
-
-                                </div>
-                            </div>
-
-                            <div class="col-auto ">
-                                <input class="btn btn-xprimary btn-sm" id="apply_submit" name="apply_submit" type="submit" value="Apply">
-                                <a class="btn btn-sm btn-secondary" href="{{ url_for('base') }}" role="button"><i class="bi bi-arrow-counterclockwise"></i> Reset</a>
-                            </div>
-                        </form>
-                    </div>
-
-               
-                    <div class="col mx-3 text-end my-auto">
-                        <button class="btn btn-sm btn-outline-xsecondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <i class="bi bi-funnel-fill"></i>
-                            Quickfilter
-                        </button>
-                    </div>
-    
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasRightLabel">Quickfilter</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="text-muted">
-                            Choose one of the predefined filters below to play around a bit and quickly find what you're looking for.
-                        </div>
-
-                        <div class="offcanvas-body">
-                            <ol class="list-group">
-                                <a class="list-group-item d-flex justify-content-between align-items-start" href="{{ url_for('base') }}">
-                                <span><i class="bi bi-arrow-right-circle"></i></span>
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Runset released in XH018</div>
-                                </div>
-                                </a>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="table-responsive">
-                        <table class="table table-borderless table-hover m-0" id="userdata">
-                            <thead class="border text-center" style="color: white;">
-                                <tr>
-                                    <form action="" method="POST">                               
-                                        <th>Ticket</th>
-                                        <th>Process</th>
-                                        <th>Subject</th>
-                                        <th>Question</th>
-                                        <th>Topic</th>
-                                        <th>Answer</th>
-                                    </form>
-                                </tr>
-                            </thead>
-                            <tbody class="border" style="text-align: left">
-                                {% for i in range(0,all) %}
-                                <tr>
-                                    <td class="text-center">
-                                        {% if res %}
-                                        <span>{{ res[i]['_source']['Ticket'] }}</span>
-                                        {% endif %}
-                                    </td>
-    
-                                    <td class="text-center">
-                                        {% if res %}
-                                        <span>{{ res[i]['_source']['Process'] }}</span>
-                                        {% endif %}
-                                    </td>
-    
-                                    <td class="text-center">
-                                        {% if res %}
-                                        <span>{{ res[i]['_source']['Subject'] }}</span>
-                                        {% endif %}
-                                    </td>
-    
-                                    <td class="text-center">
-                                        {% if res %}
-                                        <span>{{ res[i]['_source']['Description'] }}</span>
-                                        {% endif %}
-                                    </td>
-    
-                                    <td class="text-center">
-                                        {% if res %}
-                                        <span>{{ res[i]['_source']['Topic'] }}</span>
-                                        {% endif %}
-                                    </td>
-    
-                                    <td class="text-center">
-                                        {% if res %}
-                                        <span>{{ res[i]['_source']['Support'] }}</span>
-                                        {% endif %}
-                                    </td>
-                                    {% endfor %}  
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-{% endblock %}
+                            {% endblock %}

@@ -5,7 +5,7 @@ import json
 
 class elastic:
     def __init__(self):
-        self.cert = "ce0e62641c2e79c97a45439024cb446f3106c76806342758c00cbee83fd2cc4a"
+        self.cert = "d05aaa8eba62fbb871cd966a29d0a9ba3336e29fbb6463deab015c1d985a246e"
         self.pwd  = "Eldernangkai92"
         
     def connect(self):

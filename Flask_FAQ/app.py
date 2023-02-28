@@ -30,7 +30,7 @@ def test():
 #----------------------------------------------------------
 
 #-----------------------ADD-----------------------------------
-@app.route('/entry', methods=['POST','GET'])
+@app.route('/entry', methods=['POST','GET']) # type: ignore
 def add():
     if request.method == 'POST':
         tic = request.form['tic']
@@ -52,7 +52,7 @@ def add_data(tic,pro,cus,sub,top,des,sup):
 
 #-----------------------UPDATE-----------------------------------
 
-@app.route('/edit', methods=['POST','GET'])
+@app.route('/edit', methods=['POST','GET']) # type: ignore
 def update():
     if request.method == 'POST':
         tic = request.form['tic']
@@ -75,13 +75,13 @@ def update_data(tic,pro,cus,sub,top,des,sup):
 
 #-----------------------SEARCH-----------------------------------
 
-@app.route('/', methods=['POST','GET'])
+@app.route('/', methods=['POST','GET']) # type: ignore
 def home():
     if request.method == "POST":
         user = request.form['keyword']
         return Response(search_data(user))
 
-@app.route('/search', methods=['POST','GET'])
+@app.route('/search', methods=['POST','GET']) # type: ignore
 def check():
     if request.method == 'POST':
         user = request.form['keyword']

@@ -5,14 +5,87 @@ from forms import FilterForm
 app = Flask(__name__)
 
 #-----------------------ROUTE-----------------------------------
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['POST','GET'])
 def base():
     #return render_template('search.html')
-    return redirect(url_for(
-        'search',
-        process='xt018'
-    ))
+    #return redirect(url_for(
+    #    'search',
+        #process='xt018'
+    #))
+    es = elastic()
     
+    # NOTE: Get the  filter values from the form
+    process = request.args.get('Process', default='xs018')
+    
+    es.connect()
+    res = es.search(process)
+    x = res['hits']['hits']
+    
+    return render_template(
+        'search.html',
+        res=res['hits']['hits'],
+        all = len(x)
+    )
+    
+@app.route('/search')
+def search():
+    return render_template('search.html',all=0)
+
+@app.route('/entry')
+def entry():
+    return render_template('entry.html')
+
+'''
+    es = elastic()
+    
+    # NOTE: Get the  filter values from the form
+    process = request.args.get('Process', default='xt018')
+    
+    es.connect()
+    res = es.search(process)
+    x = res['hits']['hits']
+    
+    return render_template(
+        'search.html',
+        res=res['hits']['hits'],
+        all = len(x)
+    )
+'''
+    
+@app.route('/search', methods=['POST','GET']) # type: ignore
+def check():
+    if request.method == 'POST':
+        user = request.form['keyword']
+        return Response(search_data(user))
+        
+def search_data(data):
+    es = elastic()
+    es.connect()
+    #process = request.args.get('Process', default='xh018')
+
+    res = es.search(data)
+    x = res['hits']['hits']
+    
+    if x != None:
+        return render_template(
+        'search.html',
+        res=res['hits']['hits'],
+        all = len(x)
+        )
+    
+    else:
+        return render_template(
+        'search.html',
+        res=res['hits']['hits'],
+        all = 0
+        )
+                
+@app.route('/entry')
+def edit():
+    return render_template('entry.html')
+ 
+'''
+
 @app.route('/search', methods=['GET','POST'])
 def search():
     #filter_form = FilterForm()
@@ -35,7 +108,7 @@ def search():
     res = es.search(process)
     x = res['hits']['hits']
     
-    print(len(x))
+    #print(len(x))
     
     # all = []
     # for hit in x:
@@ -52,8 +125,9 @@ def search():
         res=res['hits']['hits'],
         all = len(x)
     )
-            
     
+'''
+            
 #-----------------------SEARCH-----------------------------------
 # @app.route("/", methods=['GET'])
 # def base():

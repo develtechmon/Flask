@@ -66,7 +66,7 @@ class elastic:
         })
                 
         jsonString = json.dumps(resp['hits']['hits'])
-        jsonFile = open("D:\Flask_Tutorial\Flask_FAQ\static\json\data.json","w")
+        jsonFile = open("D:\Flask\Flask_FAQ\static\json\data.json","w")
         jsonFile.write(jsonString)
         jsonFile.close()
         

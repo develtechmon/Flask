@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="tm-parallax" data-parallax="scroll" "></div>                   
+<section id="home" class="tm-section">
+    <h2 class="tm-text-primary">Welcome to TechMon</h2>
+    <hr class="mb-5">
+    <div class="row">
+        <div class="col-lg-6 tm-col-home mb-4">
+            <div class="tm-text-container">
+
+                <!-- <div class="tm-icon-home mb-5 mr-0 ml-auto">
+                    <i class="fas fa-satellite-dish fa-6x tm-text-primary"></i>
+                </div>     -->
+
+                <div class="mb-5 mr-0 ml-auto">
+                    <img src="{{ url_for('static', filename='img/control.jpg') }}" class="fas fa-6x tm-text-primary">
+                </div>                 
+                <p>
+                    Sistem ini bertujuan untuk mengawal sistem pagar Gereja Yesus Kristus
+                    Orang Suci Zaman Akhir Kuching Distrik Sarawak. 
+                </p>
+                <p>
+                    Dengan menggunakan sistem ini, penguna boleh mengawal pagar gereja secara
+                    kawalan jauh.                                        
+                </p>
+            </div>                                
+        </div>
+        <div class="col-lg-6 tm-col-home mb-4">
+            <div class="tm-text-container">
+                <!-- <div class="tm-icon-home mb-5 mr-0 ml-auto">
+                    <i class="fas fa-broadcast-tower fa-4x tm-text-primary"></i>
+                </div>                                  -->
+
+                <div class="mb-5 mr-0 ml-auto">
+                    <img src="{{ url_for('static', filename='img/gate.jpg') }}" class="fas fa-4x tm-text-primary">
+                </div> 
+                <p>
+                    This system serve the purpose to control the Chruch gate of the Church
+                    of Jesus Christ of Latter Day Saints Kuching District Sarawak.
+                </p>
+
+                <p>
+                    With this system, one can wirelessly control the church gate.
+                </p>
+                <div class="text-right">
+                    <a href="{{ url_for('control') }}" class="btn btn-primary tm-btn-next">Next Page</a>
+                </div>                                    
+            </div>
+        </div>
+    </div>
+    <hr class="tm-hr-short mb-5">
+</section>
+{% endblock %}

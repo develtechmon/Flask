@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="tm-parallax" data-parallax="scroll"  ></div>
+<section id="about" class="tm-section">
+    <h2 class="tm-text-primary">About Gate Control System</h2>
+    <hr class="mb-5">
+    
+    <div class="row tm-row-about">
+        <div class="tm-col-about tm-col-about-l">
+            <p class="mb-4">
+            One of the main advantages of a remote control gate is convenience. You can open and close the gate without having to get out of your car or manually unlock and lock the gate.
+            A remote control gate can enhance the security of your property by preventing unauthorized access. You can control who enters and exits your property by only giving access to 
+            those with a remote control.
+            <p class="mb-4">
+            Remote control gates are easy to use and can be operated by anyone with a remote control. They are also low-maintenance and require minimal upkeep.  
+            </p>
+            <p class="mb-4">
+            Overall, remote control gates offer numerous benefits, making them a popular choice for homeowners and property managers looking to enhance security, 
+            convenience, and property value.
+            </p>
+        </div>
+
+        <div class="tm-col-about tm-col-about-r">
+            <img src="{{ url_for('static', filename='img/gates.jpg') }}" alt="Image" class="img-fluid mb-5 tm-img-about">
+    
+        </div>
+
+    </div>
+    <div class="mt-5">
+        <div class="tm-carousel">
+            <div class="tm-carousel-item">
+            
+                <div class="tm-about-text">
+                    <h4 class="tm-text-secondary tm-about-subtitle">Founder and CEO</h4>
+                </div>
+            </div>
+            
+            <div class="tm-carousel-item">
+                <figure class="effect-honey mb-4">
+                    <img src="{{ url_for('static', filename='img/ysa/developer.jpg') }}" alt="Featured Item">
+                    <figcaption>
+                        <ul class="tm-social">
+                            <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="tm-about-text">
+                    <h3 class="mb-3 tm-text-primary tm-about-title">Lukas Johnny</h3>
+                    <p> Associate Staff Engineer, experience in Embedded System , IOT and Machine Learning model development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

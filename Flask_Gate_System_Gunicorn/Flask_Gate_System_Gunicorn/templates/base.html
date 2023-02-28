@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">  <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick.min.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick-theme.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+
+</head>
+<body>    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Leftside bar -->
+            <div id="tm-sidebar" class="tm-sidebar"> 
+                <nav class="tm-nav">
+                    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div>
+                        <div class="tm-brand-box">
+                            <h1 class="tm-brand">TechMon</h1>
+                        </div>                
+                        <ul id="tm-main-nav">
+                            <li class="nav-item">                                
+                                <a href="{{ url_for('home') }}" class="nav-link current">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-home nav-icon"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('control') }}" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-robot nav-icon"></i>
+                                    Control
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  href="{{ url_for('gallery') }}" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-images nav-icon"></i>
+                                    Gallery
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('about') }}" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-user-friends nav-icon"></i>
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('home') }}" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-envelope nav-icon"></i>
+                                    Contact
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://paypal.me/templatemo" class="nav-link external" target="_parent" rel="sponsored">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-external-link-alt nav-icon"></i>
+                                    External
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="mb-3 tm-mt-100">
+                        Design: <a href="https://templatemo.com" target="_parent" rel="sponsored">TemplateMo</a>
+                    </footer>
+                </nav>
+            </div>
+  
+            <div class="tm-main">
+                <div class="tm-section-wrap">
+                    {% block content %}{% endblock %}
+                </div>
+            </div> <!-- .tm-main -->     
+
+        </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>          <!-- https://jquery.com/ -->
+    <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
+    <script src="{{ url_for('static', filename='js/parallax/parallax.min.js') }}"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>     <!-- https://imagesloaded.desandro.com/ -->
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>          <!-- https://isotope.metafizzy.co/ -->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>              <!-- https://kenwheeler.github.io/slick/ -->
+
+</body>
+</html> 

@@ -26,7 +26,12 @@ def base():
         res=res['hits']['hits'],
         all = len(x)
     )
-    
+
+@app.route('/open')
+def open():
+    output = request.args.get('process')
+    return render_template('open.html',target='_blank',output=output)
+
 @app.route('/search')
 def search():
     return render_template('search.html',all=0)

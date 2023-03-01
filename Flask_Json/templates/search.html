@@ -171,29 +171,75 @@
 
                                                                         <td class='border-bottom'>                                                                   
                                                                             <div class="dropdown dropstart">
-                                                                                <button class="btn btn-sm btn-link link-dark" type="button" id="dropdownMenuButton-DS-Runset-Index" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                <button onclick="reset()" class="btn btn-sm btn-link link-dark" type="button" id="dropdownMenuButton-DS-Runset-Index" data-bs-toggle="dropdown" aria-expanded="false">
                                                                                     <i class="bi bi-three-dots-vertical"></i>
                                                                                 </button>
                                                                                 <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton-DS-Runset-Index">
                                                                                     <!-- <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-window-plus me-2"></i>Open</a></li> -->
                                                                                     <!-- <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-pencil-square me-2"></i>Edit</a></li> -->
                                                                                     
-                                                                                    <li><a  class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-window-plus me-2"></i>Open</a></li>
+                                                                                    <li><a  onClick="opendata()" id="ok" data-info="ok" class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-window-plus me-2"></i>Open</a></li>
                                                                                     <li><a  class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-pencil-square me-2"></i>Edit</a></li>
                                                                                     <li><hr class="dropdown-divider"></li>
                                                                                     <li><a  class="dropdown-item px-2 rounded-2 text-danger" name="DS Runset Index" doc_id="ES9R8XkBGTDD8zyIUsiF" onclick="setDocId()" data-bs-toggle="modal" data-bs-target="#pwConfirmModal"><i class="bi bi-trash me-2"></i>Delete</a></li>
-                                                                                    <li id="test"><a  class="dropdown-item px-2 rounded-2" target="_blank"><i class="bi bi-window-plus me-2"></i>test</a></li>
-                                                                                    <!-- <td id="test"><button>asd</button></td> -->
+                                                                                    <li><a  class="dropdown-item px-2 rounded-2 " target="_blank"><i class="bi bi-window-plus me-2"></i>test</a></li>
+                                                                                    <!-- <td ><button>asd</button></td> -->
                                                                                 </ul>
                                                                             </div>                                   
-                                                                        </td>                                                               
+                                                                        </td>                                                             
                                                                 </tr>
                                                                 {% endfor %}
                                                             </tbody>
                                                         </table>
                                                         
                                                         <script>
-                                  
+                                                        function reset(){
+                                                            var table = document.getElementById("userdata");
+                                                            var rows = table.getElementsByTagName("tr");
+                                                            for (var i = 0; i < rows.length; i++) {
+                                                            rows[i].onclick = "" 
+                                                            }
+                                                        }
+                                                
+                                                        function opendata(){
+                                                            var table = document.getElementById("userdata");
+                                                            var rows = table.getElementsByTagName("tr");
+                                                            // var flag = document.getElementById("op").dataset.info;
+
+                                                            for (var i = 0; i < rows.length; i++) {
+                                                            rows[i].onclick = function(event) {
+
+                                                                if (!event.target.matches("#ok")){
+                                                                    event.preventDefault();
+                                                                }
+                                                                else{ 
+                                                                // Get the data from the clicked row
+                                                                var cells = this.getElementsByTagName("td");
+                                                                var tickets = cells[0].textContent;
+                                                                var process = cells[1].textContent;
+                                                                var subject = cells[2].textContent;
+                                                                console.log(tickets,process,subject)}
+                                                                
+                                                                window.location.href = '/open?process=' + process;
+                                                            }}
+                                                            //location.reload()
+                                                        }
+                                                        // window.onload = opendata;
+                                                        
+                                                        function test(){
+                                                        var tickets  = document.querySelector("td:nth-of-type(1)");
+                                                        var process  = document.querySelector("td:nth-of-type(2)");
+                                                        var subject  = document.querySelector("td:nth-of-type(3)");
+                                                        var question = document.querySelector("td:nth-of-type(4)");
+                                                        var topic    = document.querySelector("td:nth-of-type(5)");
+                                                        var answer   = document.querySelector("td:nth-of-type(6)");
+                                                        tickets.classList.add("selected");
+
+                                                        console.log(tickets.textContent, process.textContent, subject.textContent, question.textContent, topic.textContent, answer.textContent);
+                                                        window.location.href = 'open.html?output=' + encodeURIComponent(output);
+
+                                                        }
+                                                        
                                                         // var table = document.getElementById("userdata");
                                                         // var buttons = document.getElementById("test").querySelectorAll("button");
                                                         // buttons.forEach(function(button) {
@@ -249,7 +295,6 @@
                                                         }
                                                         )}
 
-                                                        
                                                         </script>
 
                                                     </div>

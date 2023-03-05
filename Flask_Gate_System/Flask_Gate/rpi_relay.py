@@ -22,8 +22,8 @@ def rpi_relay(state):
             time.sleep(1)
         
         elif state == "pause":
-            GPIO.output(15, GPIO.HIGH)
-            GPIO.output(14, GPIO.LOW)
+            GPIO.output(15, GPIO.LOW)
+            GPIO.output(14, GPIO.HIGH)
             print('Relay 2 ON')
             time.sleep(1)
             

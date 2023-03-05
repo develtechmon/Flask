@@ -49,5 +49,5 @@ def update_data(key):
     return render_template('control.html')   
 
 if __name__ == '__main__':
-    #app.run(host='192.168.195.190', port=80, threaded=True)
-    app.run()
+    app.run(host='192.168.195.190', port=80, threaded=True)
+    #app.run()

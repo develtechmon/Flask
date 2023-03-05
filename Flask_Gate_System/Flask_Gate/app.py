@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for,request,render_template, Response
+import requests
 #from rpi_relay import *
 
 app = Flask(__name__)
@@ -39,6 +40,10 @@ def update_data(key):
     #     print(key)
     
     print(key)
+    data = key
+    url="http://192.168.195.154:80/api/data"
+    response = requests.post(url, json=data)
+
     #rpi_relay(key)
 
     return render_template('control.html')   

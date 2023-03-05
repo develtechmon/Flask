@@ -9,4 +9,8 @@ def api():
     return 'OK'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    '''
+    This IP address is referring to Rpi IP address
+    '''
+    app.run(host='192.168.195.154', port=80)
+    #app.run(host='0.0.0.0', port=80)

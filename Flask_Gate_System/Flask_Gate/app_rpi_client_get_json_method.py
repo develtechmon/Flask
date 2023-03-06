@@ -3,7 +3,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/api/data', methods=['POST'])
-def receive_data():
+def api():
     data = request.get_json()
     print(data)
     return 'Data received'

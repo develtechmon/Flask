@@ -6,6 +6,8 @@ app = Flask(__name__)
 def api():
     data = request.form['open']
     # process the data here
+    print(data)
+    
     return 'OK'
 
 if __name__ == '__main__':

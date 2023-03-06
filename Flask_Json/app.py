@@ -1,9 +1,9 @@
-from flask import Flask, redirect, url_for,request,render_template, Response
+from flask import Flask, redirect, url_for,request,render_template, Response, jsonify,session
 from elastic_api import *
 from forms import FilterForm
 
 app = Flask(__name__)
-
+app.secret_key = 'hello'
 #-----------------------ROUTE-----------------------------------
 @app.route('/', methods=['POST','GET'])
 def base():
@@ -27,10 +27,33 @@ def base():
         all = len(x)
     )
 
-@app.route('/open')
+@app.route('/open', methods=['POST','GET'])
 def open():
-    output = request.args.get('process')
-    return render_template('open.html',target='_blank',output=output)
+    data = request.get_json()
+
+    '''
+    Method to send data to new page to open new tab
+    ticket = data['tickets']
+    process = data['process']
+    subject = data['subject']
+    '''
+    session['data'] = data
+
+    return jsonify({'redirect_url': url_for('display')})
+
+    #output = request.args.get('subject')
+    #return render_template('open.html',output=subject)
+
+@app.route('/display')
+def display():
+    data = session.get('data')
+    ticket   = data['tickets']
+    process  = data['process']
+    subject  = data['subject']
+    question = data['question']
+    topic    = data['topic']
+    answer   = data['answer']
+    return render_template('open.html',TICKET=ticket,PROCESS=process,SUBJECT=subject,QUESTION=question,TOPIC=topic,ANSWER=answer) 
 
 @app.route('/search')
 def search():

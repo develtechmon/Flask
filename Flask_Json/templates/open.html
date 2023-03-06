@@ -1,13 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Pass Output Page</title>
 </head>
 <body>
-    <a target="{{ target }}">Open New Page</a>
+    <!-- <a target="{{ target }}" >Open New Page</a> -->
+    <h1>Hotline FAQ</h1>
 
-    <h1>JavaScript Output:</h1>
-
-    <p>{{ output }}</p>
+    <p>{{ TICKET }}</p>
+    <p>{{ PROCESS }}</p>
+    <p>{{ SUBJECT }}</p>
+    <p>{{ QUESTION }}</p>
+    <p>{{ TOPIC }}</p>
+    <p>{{ ANSWER }}</p>
 </body>
 </html>
+{% endblock %}

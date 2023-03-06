@@ -95,8 +95,6 @@
                 }
             )(window, document);
             </script>
-        </head>
-        </head>
     </head>
     <body>
         <div class="pagewrap">
@@ -106,39 +104,43 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7 mb-5 mb-lg-0">
                                 <h2 class="mb-5" style="text-align: left; color:#005B75">New FAQ Entry Form.</h2>
-                                <form class="border-right pr-5 mb-5" method="post" id="contactForm" name="contactForm" method="post">
-                                    <div class="row">
+                                <form  class="border-right pr-5 mb-5" method="post" id="contactForm" name="contactForm" method="post">
+                                    <div  class="row">
                                         <div class="col-md-6 form-group">
-                                            <input type="text" class="form-control" name="tic" id="ticket" placeholder=" Ticket" value="XH018">
+                                            <input type="text" class="form-control" name="tic" id="ticket" placeholder=" Ticket" value={{ TICKET }}>
                                             </div>
                                         <div class="col-md-6 form-group">
-                                            <input type="text" class="form-control" name="pro" id="process" placeholder=" Process">
+                                            <input type="text" class="form-control" name="pro" id="process" placeholder=" Process" value={{ PROCESS }}>
                                         </div>
-
-                    
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group">
-                                            <input type="text" class="form-control" name="top" id="topic" placeholder="Topic">
+                                            <textarea  style="text-align: justify; font-size: 16px;line-height: 1.5;" type="text" class="form-control" name="top" id="subject" placeholder="Subject">{{ SUBJECT }}</textarea>
                                         </div>
-
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group">
-                                            <textarea class="form-control" name="des" id="question" cols="30" rows="7" placeholder=" Question"></textarea>
+                                            <textarea style="text-align: justify; font-size: 16px;line-height: 1.5;" type="text" class="form-control" name="des" id="question" cols="30" rows="7" placeholder=" Question" >{{ QUESTION }}</textarea>
                                         </div>
 
                                         <div class="col-md-12 form-group">
-                                            <textarea class="form-control" name="sup" id="answer" cols="30" rows="7" placeholder=" Answer"></textarea>
+                                            <textarea style="text-align: justify; font-size: 16px;line-height: 1.5;" type="text" class="form-control" name="sup" id="answer" cols="30" rows="7" placeholder=" Answer" >{{ ANSWER }}</textarea>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <input type="text" class="form-control" name="top" id="remark" placeholder="Remark">
                                         </div>
-
                                     </div>
+
+                                    <script>
+                                    window.onload = function(){
+                                        var subject = document.getElementById("subject").innerHTML;
+                                        console.log(subject)
+                                        // document.getElementById("subject").value = subject;
+                                        
+                                    }
+                                    </script>
 
                                     <div class="row">
                                         <div class="col-md-12">

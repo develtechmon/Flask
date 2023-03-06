@@ -53,7 +53,8 @@ def display():
     question = data['question']
     topic    = data['topic']
     answer   = data['answer']
-    return render_template('open.html',TICKET=ticket,PROCESS=process,SUBJECT=subject,QUESTION=question,TOPIC=topic,ANSWER=answer) 
+    print(subject.strip())
+    return render_template('display.html',TICKET=ticket.strip(),PROCESS=process.strip(),SUBJECT=subject.strip(),QUESTION=question.strip(),TOPIC=topic.strip(),ANSWER=answer.strip()) 
 
 @app.route('/search')
 def search():
@@ -61,7 +62,7 @@ def search():
 
 @app.route('/entry')
 def entry():
-    return render_template('entry.html')
+    return render_template('display.html')
 
 '''
     es = elastic()

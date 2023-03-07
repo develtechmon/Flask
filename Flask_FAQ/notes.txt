@@ -1,0 +1,3 @@
+## Notes
+External - remove tickets number
+Interna - keep tickets number

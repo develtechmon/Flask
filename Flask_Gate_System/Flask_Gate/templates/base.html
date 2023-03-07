@@ -3,26 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Basic styles */
+        body {
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+
+        /* Header styles */
+        header {
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+        }
+
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo a {
+          color: #fff;
+          font-size: 24px;
+          text-decoration: none;
+        }
+
+        .menu li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+
+        .menu li a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .burger {
+          display: none;
+          cursor: pointer;
+        }
+
+        .burger span {
+          display: block;
+          width: 30px;
+          height: 3px;
+          background-color: #fff;
+          margin: 5px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        /* Main styles */
+        main {
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        /* Footer styles */
+        footer {
+          background-color: #ccc;
+          color: #333;
+          padding: 10px;
+        }
+
+        /* Media queries */
+        @media only screen and (max-width: 768px) {
+          .menu {
+            display: none;
+          }
+
+          .burger {
+            display: block;
+          }
+
+          .burger span {
+            transform-origin: 50% 50%;
+          }
+
+          .burger span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+          }
+
+          .burger span:nth-child(2) {
+            opacity: 0;
+          }
+
+          .burger span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+          }
+        }
+
+        .image-container {
+          max-width: 100%;
+          height: auto;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+    </style>
+
     <title>TechMon</title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">  <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick.min.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick-theme.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
+
     <script>
         if ( window.history.replaceState ) {
             window.history.replaceState( null, null, window.location.href );
         }
     </script>
 
+
+
 </head>
-<body>    
+<body>
     <div class="container-fluid">
         <div class="row">
             <!-- Leftside bar -->
-            <div id="tm-sidebar" class="tm-sidebar"> 
+            <div id="tm-sidebar" class="tm-sidebar">
                 <nav class="tm-nav">
                     <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
@@ -30,10 +144,10 @@
                     <div>
                         <div class="tm-brand-box">
                             <h1 class="tm-brand">TechMon</h1>
-                        </div>                
+                        </div>
                         <ul id="tm-main-nav">
-                            <li class="nav-item">                                
-                                <a href="{{ url_for('home') }}" class="nav-link current">
+                            <li class="nav-item">
+                                <a href="{{ url_for('home') }}" class="nav-link">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-home nav-icon"></i>
                                     Home
@@ -68,25 +182,25 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://paypal.me/templatemo" class="nav-link external" target="_parent" rel="sponsored">
+                                <a href="https://github.com/develtechmon" class="nav-link external" target="_blank" rel="sponsored">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-external-link-alt nav-icon"></i>
-                                    External
+                                    External <a  target="_parent" rel="sponsored"></a>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <footer class="mb-3 tm-mt-100">
-                        Design: <a href="https://templatemo.com" target="_parent" rel="sponsored">TemplateMo</a>
+                        Development: <a href="https://github.com/develtechmon" target="_parent" rel="sponsored">v1.3</a>
                     </footer>
                 </nav>
             </div>
-  
+
             <div class="tm-main">
                 <div class="tm-section-wrap">
                     {% block content %}{% endblock %}
                 </div>
-            </div> <!-- .tm-main -->     
+            </div> <!-- .tm-main -->
 
         </div> <!-- .row -->
     </div> <!-- .container-fluid -->
@@ -96,7 +210,9 @@
     <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>     <!-- https://imagesloaded.desandro.com/ -->
     <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>          <!-- https://isotope.metafizzy.co/ -->
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <script src="{{ url_for('static', filename='js/send.data.to.rpi.js') }}"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
     <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>              <!-- https://kenwheeler.github.io/slick/ -->
+    <!-- <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>              https://kenwheeler.github.io/slick/ -->
 
 </body>
-</html> 
+</html>

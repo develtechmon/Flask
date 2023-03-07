@@ -1,61 +1,103 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="tm-parallax" data-parallax="scroll"></div>                   
+<div class="tm-parallax" data-parallax="scroll"></div>
 <section id="control" class="tm-section">
     <h2 class="tm-text-primary">Gate Control</h2>
     <hr class="mb-5">
 
-    <div class="row tm-row-home">                            
-        <div class="tm-col-home tm-col-home-l">
-            
+    <div class="row tm-row-home">
+        <div class="tm-col-home">
+
             <div class="media mb-4">
-                <form method="POST">
-                <!--<form id="OP" action="http://192.168.195.154:80/api" method="POST">-->
-                <a class="button"> <button type="submit" style="border-radius: 15px" class="fas fa-door-open fa-4x tm-post-icon tm-text-primary" name="open" value="OPEN" ></button></a>
+                <!-- 1st Method - Uncomment this to Send data using flask control in app.py script and this is read by app_rpi_client_get_json_flask_method.py in RPI-->
+                <!-- <form method="POST"> -->
+
+                <!-- 2nd Method - Uncomment this to Send data using form action. This is read by app_rpi_client_get_api_method in RPI-->
+                <!--<form action="http://192.168.195.154:80/api" method="POST">-->
+                <!-- <form action="http://10.60.215.170:80/api" method="POST"> -->
+
+                <!-- 3rd Method - Uncomment this to Send data using Ajax. This is read by app_rpi_client_get_api_ajax_method in RPI  -->
+                <form id="OPE" method="POST">
+                <a class="button"><button style="border-radius: 15px" class="fas fa-door-open fa-4x tm-post-icon tm-text-primary" name="open" value="OPEN" ></button></a>
                 </form>
                 <div class="media-body">
-                    <a style="font-size:20px"; class="d-block mb-2 tm-text-primary tm-post-link"><b>Open Gate</b></a>   
+                    <a style="font-size:20px"; class="d-block mb-2 tm-text-primary tm-post-link"><b>Open Gate</b></a>
                     <p>
                         Click this button to open the Church Gate. Please wait for a while until
                         the gate open completely.
                     </p>
-                </div>                                    
+                </div>
             </div>
 
             <div class="media mb-4">
-                <form method="POST">
+                <!-- 1st Method - Uncomment this to Send data using flask control in app.py script and this is read by app_rpi_client_get_json_flask_method.py in RPI-->
+                <!-- <form method="POST"> -->
+
+                <!-- 2nd Method - Uncomment this to Send data using form action. This is read by app_rpi_client_get_api_method in RPI-->
                 <!--<form action="http://192.168.195.154:80/api" method="POST">-->
+                <!-- <form action="http://10.60.215.170:80/api" method="POST"> -->
+
+                <!-- 3rd Method - Uncomment this to Send data using Ajax. This is read by app_rpi_client_get_api_ajax_method in RPI  -->
+                <form id="PAU" method="POST">
                 <a class="button"><button style="border-radius:15px" class="fas fa-pause-circle fa-4x tm-post-icon tm-text-primary" name="pause" value="PAUSE"></button></a>
                 </form>
                 <div class="media-body">
-                    <a style="font-size:20px"; class="d-block mb-2 tm-text-primary tm-post-link"><b>Stop Gate</b></a>  
+                    <a style="font-size:20px"; class="d-block mb-2 tm-text-primary tm-post-link"><b>Stop Gate</b></a>
                     <p>
                         Click this button to stop the gate from moving. This function is useful when you want
                         to stop the gate either close or open halfway.
                     </p>
-                </div>                                    
+                </div>
             </div>
 
             <div class="media mb-4">
-                <form method="POST">
-                <!--<form action="http://192.168.195.154:80/api" method="POST">--> 
+                <!-- 1st Method - Uncomment this to Send data using flask control in app.py script and this is read by app_rpi_client_get_json_flask_method.py in RPI -->
+                <!-- <form method="POST"> -->
+
+                <!-- 2nd Method - Uncomment this to Send data using form action. This is read by app_rpi_client_get_api_method in RPI-->
+                <!--<form action="http://192.168.195.154:80/api" method="POST">-->
+                <!-- <form action="http://10.60.215.170:80/api" method="POST"> -->
+
+                <!-- 3rd Method - Uncomment this to Send data using Ajax. This is read by app_rpi_client_get_api_ajax_method in RPI  -->
+                <form id="CLO" method="POST">
                 <a class="button"> <button style="border-radius:15px" class="fas fa-door-closed fa-4x tm-post-icon tm-text-primary" name="close" value="CLOSE"></button></a>
                 </form>
                 <div class="media-body">
-                    <a style="font-size:20px"; class="d-block mb-2 tm-text-primary tm-post-link"><b>Close Gate</b></a>  
+                    <a style="font-size:20px"; class="d-block mb-2 tm-text-primary tm-post-link"><b>Close Gate</b></a>
                     <p>
                         Click this button to close the Church gate. Please wait for a while until
                         the gate close completely.
                     </p>
-                </div>                                    
+                    <div class="text-right">
+                    <a href="{{ url_for('gallery') }}" class="btn btn-primary tm-btn-next">Next Page</a>
+                    </div>
+                </div>
             </div>
 
+            <style>
+                button {
+                  /* background-color: rgba(233, 219, 218, 0.356); */
+                  /* color: rgb(226, 47, 47); */
+                  font-size: 16px;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+                
+                button:hover {
+                  background-color: rgb(240, 0, 0);
+                }
+              </style>
+              
         </div>
         <div class="tm-col-home mr-0 ml-auto">
-            <div class="tm-img-home-container"></div>                                
+            <!--<div class="tm-img-home-container image-container"></div>-->
+            <div class="image-container"></div>
         </div>
     </div>
+    <hr class="tm-hr-short mb-5">
+
 </section>
- 
+
 {% endblock %}

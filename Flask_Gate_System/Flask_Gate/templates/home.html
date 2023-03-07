@@ -2,9 +2,9 @@
 {% block content %}
 
 
-<div class="tm-parallax" data-parallax="scroll" "></div>                   
+<div class="tm-parallax" data-parallax="scroll" ></div>
 <section id="home" class="tm-section">
-    <h2 class="tm-text-primary">Welcome to TechMon</h2>
+    <h2 class="tm-text-primary">Welcome to Internet Gate Control System</h2>
     <hr class="mb-5">
     <div class="row">
         <div class="col-lg-6 tm-col-home mb-4">
@@ -15,18 +15,20 @@
                 </div>     -->
 
                 <div class="mb-5 mr-0 ml-auto">
-                    <img src="{{ url_for('static', filename='img/control.jpg') }}" class="fas fa-6x tm-text-primary">
-                </div>                 
+                    <!--<img src="{{ url_for('static', filename='img/control.jpg') }}" class="fas fa-6x tm-text-primary">-->
+                    <img src="{{ url_for('static', filename='img/control.jpg') }}" class="image-container">
+                </div>
                 <p>
                     Sistem ini bertujuan untuk mengawal sistem pagar Gereja Yesus Kristus
-                    Orang Suci Zaman Akhir Kuching Distrik Sarawak. 
+                    Orang Suci Zaman Akhir Kuching Distrik Sarawak.
                 </p>
                 <p>
                     Dengan menggunakan sistem ini, penguna boleh mengawal pagar gereja secara
-                    kawalan jauh.                                        
+                    kawalan jauh.
                 </p>
-            </div>                                
+            </div>
         </div>
+
         <div class="col-lg-6 tm-col-home mb-4">
             <div class="tm-text-container">
                 <!-- <div class="tm-icon-home mb-5 mr-0 ml-auto">
@@ -34,8 +36,9 @@
                 </div>                                  -->
 
                 <div class="mb-5 mr-0 ml-auto">
-                    <img src="{{ url_for('static', filename='img/gate.jpg') }}" class="fas fa-4x tm-text-primary">
-                </div> 
+                    <!--<img src="{{ url_for('static', filename='img/gate.jpg') }}" class="fas fa-4x tm-text-primary">-->
+                    <img src="{{ url_for('static', filename='img/gate.jpg') }}" class="image-container">
+                </div>
                 <p>
                     This system serve the purpose to control the Chruch gate of the Church
                     of Jesus Christ of Latter Day Saints Kuching District Sarawak.
@@ -46,7 +49,7 @@
                 </p>
                 <div class="text-right">
                     <a href="{{ url_for('control') }}" class="btn btn-primary tm-btn-next">Next Page</a>
-                </div>                                    
+                </div>
             </div>
         </div>
     </div>

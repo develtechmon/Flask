@@ -1,44 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="tm-parallax" data-parallax="scroll"></div>                   
-<section id="gallery" class="tm-section">
+<div class="tm-parallax tm-section" data-parallax="scroll"></div>                   
+<section >
+    <br><br>
     <h2 class="tm-text-primary">Church Gallery</h2>
     <hr class="mb-5">
     <ul class="tm-gallery-links">
+        <!-- class="tm-section" -->
         <li>
             <a href="javascript:void(0);" class="active tm-gallery-link" data-filter="*">
                 <i class="fas fa-layer-group tm-gallery-link-icon"></i>
-                All
+                Matang
             </a>
         </li>
         <li>
             <a href="javascript:void(0);" class="tm-gallery-link" data-filter="portrait">
                 <i class="fas fa-portrait tm-gallery-link-icon"></i>
-                Portraits
+                Batu Kawa
             </a>
         </li>
         <li>
             <a href="javascript:void(0);" class="tm-gallery-link" data-filter="nature">
                 <i class="fas fa-leaf tm-gallery-link-icon"></i>
-                Nature
+                Kuching 1
             </a>
         </li>
         <li>
             <a href="javascript:void(0);" class="tm-gallery-link" data-filter="animal">
                 <i class="fas fa-paw tm-gallery-link-icon"></i>
-                Animals
+                Kuching 2
             </a>
         </li>
         <li>
             <a href="javascript:void(0);" class="tm-gallery-link" data-filter="building">
                 <i class="far fa-building tm-gallery-link-icon"></i>
-                Buildings
+                Samarahan
             </a>
         </li>
     </ul>
-    <div class="tm-gallery">
 
+    <div class="tm-gallery">
         <figure class="effect-honey tm-gallery-item portrait">
             <img src="{{ url_for('static', filename='img/building/ldschurch.jpg') }}" alt="Image"/>
             <figcaption>
@@ -130,9 +132,14 @@
             <img src="{{ url_for('static', filename='img/building/building-03.jpg') }}" alt="Image"/>
             <figcaption>
                 <h2><i>Dreamy Honey</i></h2>
-                <a href="{{ url_for('static', filename='img/building/building-03.jpg') }}">View more</a>						
-            </figcaption>			
-        </figure>  
+                <a href="{{ url_for('static', filename='img/building/building-03.jpg') }}">View more</a>	
+            </figcaption>	
+        </figure>
     </div>
+
+    <div class="text-right">
+        <a href="{{ url_for('about') }}" class="btn btn-primary tm-btn-next">Next Page</a>
+    </div>
+
 </section>
 {% endblock %}

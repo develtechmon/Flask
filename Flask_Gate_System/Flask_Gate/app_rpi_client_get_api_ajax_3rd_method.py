@@ -34,7 +34,12 @@ if __name__ == '__main__':
 
     # Using 0 address to at port 80 to accept any incoming data in this pipeline
     #app.run(host='0.0.0.0', port=80)
-    app.run(host='10.60.215.170', port=80)
+
+    # Office
+    #app.run(host='10.60.215.170', port=80)
+
+    # Visitor
+    app.run(host='10.60.129.54',port=80)
 
     # Just run
     #app.run()

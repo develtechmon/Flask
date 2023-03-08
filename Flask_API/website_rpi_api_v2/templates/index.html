@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send data to Client</title>
+</head>
+<body>
+  <!--!This IP address is referring to RPI IP address -->
+  <form >
+    <a class="button">
+        <button onclick="myFunction()" >Click me</button>
+    </a>
+  </form>
+
+  <form id="PAU" method="POST">
+    <a class="button"><button >POST ME</button></a>
+</form>
+</body>
+
+<script>
+    const url = "http://10.60.215.170:80/api/data"
+    function myFunction()
+    {
+        alert("submitted !")
+    }
+
+    document.getElementById("PAU").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const data = {
+    temperature: 25.5,
+    humidity: 60.0
+    };
+
+    // make AJAX request to submit form data in the background
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        // handle the response from the server, if necessary
+        console.log(this.responseText);
+    }
+    };
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    // To send multiple data
+    //xhttp.send("param1=OPEN&param2=open");
+
+    // To send single data
+    xhttp.send("param1=open");
+
+    });
+</script>
+</html>

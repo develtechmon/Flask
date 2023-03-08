@@ -5,7 +5,7 @@ import json
 import urllib.request
 import urllib.parse
 
-import httplib2
+#import httplib2
 
 #from rpi_relay import *
 

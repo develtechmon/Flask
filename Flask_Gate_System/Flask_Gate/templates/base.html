@@ -1,118 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-
-        /* Basic styles */
-        body {
-          font-family: Arial, sans-serif;
-          font-size: 16px;
-          line-height: 1.5;
-        }
-
-        /* Header styles */
-        header {
-          background-color: #333;
-          color: #fff;
-          padding: 10px;
-        }
-
-        nav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .logo a {
-          color: #fff;
-          font-size: 24px;
-          text-decoration: none;
-        }
-
-        .menu li {
-          display: inline-block;
-          margin: 0 10px;
-        }
-
-        .menu li a {
-          color: #fff;
-          text-decoration: none;
-        }
-
-        .burger {
-          display: none;
-          cursor: pointer;
-        }
-
-        .burger span {
-          display: block;
-          width: 30px;
-          height: 3px;
-          background-color: #fff;
-          margin: 5px;
-          transition: all 0.3s ease-in-out;
-        }
-
-        /* Main styles */
-        main {
-          padding: 10px;
-        }
-
-        h1 {
-          font-size: 36px;
-        }
-
-        /* Footer styles */
-        footer {
-          background-color: #ccc;
-          color: #333;
-          padding: 10px;
-        }
-
-        /* Media queries */
-        @media only screen and (max-width: 768px) {
-          .menu {
-            display: none;
-          }
-
-          .burger {
-            display: block;
-          }
-
-          .burger span {
-            transform-origin: 50% 50%;
-          }
-
-          .burger span:nth-child(1) {
-            transform: rotate(45deg) translate(7px, 7px);
-          }
-
-          .burger span:nth-child(2) {
-            opacity: 0;
-          }
-
-          .burger span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-          }
-        }
-
-        .image-container {
-          max-width: 100%;
-          height: auto;
-        }
-
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-    </style>
 
     <title>TechMon</title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
@@ -122,14 +13,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick.min.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick-theme.css') }}">  <!-- https://kenwheeler.github.io/slick/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/flexible-screenview.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/image-container.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
 
     <script>
         if ( window.history.replaceState ) {
             window.history.replaceState( null, null, window.location.href );
         }
     </script>
-
-
 
 </head>
 <body>
@@ -138,9 +30,68 @@
             <!-- Leftside bar -->
             <div id="tm-sidebar" class="tm-sidebar">
                 <nav class="tm-nav">
-                    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
+                  <div id="main">
+                    <button class="navbar-toggler" type="button" onClick="openNav()" aria-label="Toggle navigation">
+                        <i class="fas fa-bars">
+                        </i>
                     </button>
+                  </div>
+                  <div>
+                    <div id="mySidebar" class="sidebar">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+                      <li class="nav-item">
+                        <a href="{{ url_for('control') }}" class="nav-link">
+                            <i class="fas fa-robot nav-icon"></i>
+                            Control
+                          </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a  href="{{ url_for('gallery') }}" class="nav-link">
+                            <i class="fas fa-images nav-icon"></i>
+                            Gallery
+                          </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a href="{{ url_for('about') }}" class="nav-link">
+                            <i class="fas fa-user-friends nav-icon"></i>
+                            About
+                          </a>
+                      </li>
+                     
+                      <li class="nav-item">
+                        <a href="{{ url_for('home') }}" class="nav-link">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="https://github.com/develtechmon" class="nav-link external" target="_blank" rel="sponsored">
+                            <i class="fas fa-external-link-alt nav-icon"></i>
+                            External <a  target="_parent" rel="sponsored"></a>
+                        </a>
+                    </li>
+                    <footer class="mb-3 tm-mt-100">
+                        Development: <a href="https://github.com/develtechmon" target="_blank" rel="sponsored">v1.3</a>
+                    </footer>
+                    </div>
+                  </div>
+
+                    <script>
+                        function openNav() {
+                          document.getElementById("mySidebar").style.width = "230px";
+                          document.getElementById("main").style.marginLeft = "230px";
+                        }
+
+                        function closeNav() {
+                          document.getElementById("mySidebar").style.width = "0";
+                          document.getElementById("main").style.marginLeft= "0";
+                        }
+                    </script>
+
                     <div>
                         <div class="tm-brand-box">
                             <h1 class="tm-brand">TechMon</h1>
@@ -206,7 +157,7 @@
     </div> <!-- .container-fluid -->
     <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>          <!-- https://jquery.com/ -->
     <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
-    <script src="{{ url_for('static', filename='js/parallax/parallax.min.js') }}"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="{{ url_for('static', filename='js/parallax/parallax.min.js') }}"></script>     https://pixelcog.github.io/parallax.js/
     <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>     <!-- https://imagesloaded.desandro.com/ -->
     <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>          <!-- https://isotope.metafizzy.co/ -->
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->

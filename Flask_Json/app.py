@@ -94,6 +94,7 @@ def search_data(data):
 
     res = es.search(data)
     x = res['hits']['hits']
+    print(x)
     
     if x != None:
         return render_template(

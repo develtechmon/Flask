@@ -1,15 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FAQ</title>
 
-    <link href="../static/css/dashboard.css" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
-    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <style>
         .bd-placeholder-img {
@@ -65,62 +60,62 @@
     </style>
 
     <style>
-           .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
     </style>
+  </head>
 
-  </head>  
   <body>    
-
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
         <symbol id="home" viewBox="0 0 16 16">
           <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
@@ -232,236 +227,152 @@
           <symbol id="geo-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
           </symbol>
-  </svg>
+    </svg>
 
-  <header class="navbar navbar-dark  bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Information</a> 
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <form style="display: flex; width: 90%;" method="post">
-      <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search" name="keyword">
-      <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#">Enter</a>
-        </div>
-      </div>
-    </form>
-
-  </header>  
-
-  <div class="container-fluid">
-    <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="position-sticky pt-3 sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#">
-                <span data-feather="home" class="align-text-bottom"></span>
-                Tickets
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file" class="align-text-bottom"></span>
-                Customer
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart" class="align-text-bottom"></span>
-                Products
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users" class="align-text-bottom"></span>
-                Customers
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-                Topic
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="layers" class="align-text-bottom"></span>
-                Integrations
-              </a>
-            </li>                         
-          </ul>
-<!--   
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-            <span>Saved reports</span>
-            <a class="link-secondary" href="#" aria-label="Add a new report">
-              <span data-feather="plus-circle" class="align-text-bottom"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text" class="align-text-bottom"></span>
-                Current month
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text" class="align-text-bottom"></span>
-                Last quarter
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text" class="align-text-bottom"></span>
-                Social engagement
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text" class="align-text-bottom"></span>
-                Year-end sale
-              </a>
-            </li>
-          </ul>
-        </div> -->
-
-        <div style="padding: 10px;">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary">New</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto bi-text-left" >Customer inquire why they can't use BNIMP layer in a photodiode</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <img class="bd-placeholder-img" width="100%" height="150" src="https://source.unsplash.com/1600x500?Game" >
-            </div>
-        </div>
-        </div>
-
-        <div style="padding: 10px;">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary">New</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <img class="bd-placeholder-img" width="100%" height="150" src="https://source.unsplash.com/1600x500?Semiconductor" >
-            </div>
-        </div>
-        </div>  
-      </nav>
-  
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Dashboard</h1>
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group me-2">
-              <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-            </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-              <span data-feather="calendar" class="align-text-bottom"></span>
-              This week
-            </button>
+    <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="../static/img/corner-graphics1.png" alt="" width="72" height="57">
+            <h2>Edit form</h2>
+            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
           </div>
-        </div>
-  
-        <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>
-  
-        <h2>Result</h2>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm table table-bordered" id="userdata">
-            <thead>
-              <tr>
-                <form action="" method="POST">
-                <th scope="col">Tickets</th>
-                <th scope="col">Process</th>
-                <th scope="col">Subject</th>
-                <th scope="col">Question</th>
-                <th scope="col">Topic</th>
-                <th scope="col">Answer</th>
-                <th scope="col"></th>
-                </form>
-              </tr>
-            </thead>
-            <tbody>
-              {% for i in range(0,all) %}
-              <tr style="text-align: justify;">
-                      <td >
-                          {% if res %}
-                              <p id="ticket" class="font-monospace text-muted badge rounded-pill" style="background-color:#74f8ed;">{{ res[i]['_source']['Ticket'] }}</p>
-                          {% endif %}
-                      </td>
+      
+          <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-primary">Data</span>
+                <span class="badge bg-primary rounded-pill">3</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Product name</h6>
+                    <small class="text-muted">Brief description</small>
+                  </div>
+                  <span class="text-muted">$12</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Second product</h6>
+                    <small class="text-muted">Brief description</small>
+                  </div>
+                  <span class="text-muted">$8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Third item</h6>
+                    <small class="text-muted">Brief description</small>
+                  </div>
+                  <span class="text-muted">$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-light">
+                  <div class="text-success">
+                    <h6 class="my-0">Promo code</h6>
+                    <small>EXAMPLECODE</small>
+                  </div>
+                  <span class="text-success">−$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Total (USD)</span>
+                  <strong>$20</strong>
+                </li>
+              </ul>
+      
+              <form class="card p-2">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Promo code">
+                  <button type="submit" class="btn btn-secondary">Redeem</button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Information</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Tickets</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Process</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+            
+                  <div class="col-12">
+                    <label for="email" class="form-label">Topic <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address2" class="form-label">Question<span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
 
-                      <td >
-                          {% if res %}
-                              <p id="process" class="font-monospace text-muted text-center"  style="font-size: small;">{{ res[i]['_source']['Process'] }}</p>
-                          {% endif %}
-                      </td>
+                  <div class="col-12">
+                    <label for="email" class="form-label">Topic <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Answer <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
 
-                      <td >
-                          {% if res %}
-                              <p id="subject" class="fst-italic"  style="font-size: small;">{{ res[i]['_source']['Subject'] }}</p>
-                          {% endif %}
-                      </td>
+                <hr class="my-4">
+      
+                <h4 class="mb-3">View</h4>
+      
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Internal</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">External</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">Public</label>
+                  </div>
+                </div>
 
-                      <td >
-                          {% if res %}
-                              <p id="description" class="fst-italic"  style="font-size: small;">{{ res[i]['_source']['Description'] }}</p>
-                          {% endif %}
-                      </td>
-
-                      <td >
-                          {% if res %}
-                              <p id="topic" class="fst-italic"  style="font-size: small;">{{ res[i]['_source']['Topic'] }}</p>
-                          {% endif %}
-                      </td>
-
-                      <td >
-                          {% if res %}
-                              <span id="support" class="fst-italic" style="font-size: small;">{{ res[i]['_source']['Support'] }}</span>
-                          {% endif %}
-                      </td>
-                      
-
-                      <td class='border-bottom'>                                                                   
-                          <div class="dropdown dropstart">
-                              <button onclick="reset()" class="btn btn-sm btn-link link-dark" type="button" id="dropdownMenuButton-DS-Runset-Index" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <i class="bi bi-three-dots-vertical"></i>
-                              </button>
-                              <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton-DS-Runset-Index">
-                                  <!-- <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-window-plus me-2"></i>Open</a></li> -->
-                                  <!-- <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-pencil-square me-2"></i>Edit</a></li> -->
-                                  
-                                  <li><a  onClick="display()" id="ok" data-info="ok" class="dropdown-item px-2 rounded-2"><i class="bi bi-window-plus me-2"></i>Open</a></li>
-                                  <li><a class="dropdown-item px-2 rounded-2" target="_blank"  href="{{ url_for('entry') }}"><i class="bi bi-pencil-square me-2"></i>Edit</a></li>
-                                  <li><hr class="dropdown-divider"></li>
-                                  <li><a  class="dropdown-item px-2 rounded-2 text-danger" name="DS Runset Index" doc_id="ES9R8XkBGTDD8zyIUsiF" onclick="setDocId()" data-bs-toggle="modal" data-bs-target="#pwConfirmModal"><i class="bi bi-trash me-2"></i>Delete</a></li>
-                                  <!-- <td ><button>asd</button></td> -->
-                              </ul>
-                          </div>                                   
-                      </td>   
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </main>
-    </div>
-  </div>
-
-  <script src="https://getbootstrap.com//docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-  <script src="https://getbootstrap.com/docs/5.3/examples/dashboard/dashboard.js"></script>
+                <hr class="my-4">
+      
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      
+      </div>
+      
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
+    <script src="checkout.js"></script>
+        
   </body>
-
-{% endblock %}
+  {% endblock %}

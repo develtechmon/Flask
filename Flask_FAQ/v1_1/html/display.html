@@ -7,19 +7,11 @@
 
     <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="../static/bootstrap-icons-1.8.1/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="../static/bootstrap-icons-1.5.0/bootstrap-icons.css">
+    <link href="../static/bootstrap-icons-1.8.1/bootstrap-icons.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../static/js/display_click_table.js"></script>
-
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     
     <style>
         .bd-placeholder-img {
@@ -73,6 +65,59 @@
           -webkit-overflow-scrolling: touch;
         }
     </style>
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
 
   </head>
   <body>    
@@ -192,25 +237,26 @@
     </svg>
 
     <div class="container-fluid d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"  style="background-color: #1b7fb9;">
-      <a class="navbar-brand" href="{{ url_for('home') }}">
-          <img src="../static/img/xabulous-logo.svg" height="30px" alt="xabulous-logo" >
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="{{ url_for('base') }}" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-      </a>
+      <a class="navbar-brand" href="#">
+            <img src="../static/img/xabulous-logo.svg" height="30px" alt="xabulous-logo" >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
           <li>
-            <a href="{{ url_for('home') }}" class="nav-link text-white">
+            <a href="#" class="nav-link text-white">
               <svg class="bi d-block mx-auto mb-1" width="20" height="20"><use xlink:href="#home"></use></svg>
               Home
             </a>
           </li>
 
           <li>
-            <a href="{{ url_for('search') }}" class="nav-link text-white">
+            <a href="#" class="nav-link text-white">
               <svg class="bi d-block mx-auto mb-1" width="20" height="20"><use xlink:href="#search"></use></svg>
               Search
             </a>
@@ -219,10 +265,10 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <svg class="bi d-block mx-auto mb-1" width="20" height="20"><use xlink:href="#document"></use></svg>
-              Data
+              Document
             </a>
-            <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item d-flex gap-3 align-items-center" target="_blank" href="{{ url_for('display') }}">
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item d-flex gap-3 align-items-center" target="_blank" href="{{ url_for('entry') }}">
                 <svg class="bi" width="16" height="16"><use xlink:href="#files"></use></svg>
                 Entry
               </a></li>
@@ -235,7 +281,7 @@
             </ul>
           <li>
           <li>
-            <a href="{{ url_for('upload') }}" class="nav-link text-white">
+            <a href="#" class="nav-link text-white">
               <svg class="bi d-block mx-auto mb-1" width="20" height="20"><use xlink:href="#grid"></use></svg>
               Upload
             </a>
@@ -250,10 +296,176 @@
         </ul>
     </div>
 
-    <div>
-      {% block content %}{% endblock %}
+    <div class="container">
+    
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="#">ESD</a>
+          <a class="p-2 link-secondary" href="#">Analog</a>
+          <a class="p-2 link-secondary" href="#">Digital</a>
+          <a class="p-2 link-secondary" href="#">Process Development</a>
+          <a class="p-2 link-secondary" href="#">Process Specifications</a>
+          <a class="p-2 link-secondary" href="#">Memory</a>
+          <a class="p-2 link-secondary" href="#">Cadence</a>
+          <a class="p-2 link-secondary" href="#">Mentor</a>
+          <a class="p-2 link-secondary" href="#">Models</a>
+          <a class="p-2 link-secondary" href="#">OPTO</a>
+          <a class="p-2 link-secondary" href="#">Reliability</a>
+          <a class="p-2 link-secondary" href="#">MEMS</a>
+        </nav>
+      </div>
     </div>
-
+    
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Hotline Wikipedia</h1>
+          <p class="lead my-3">Find your information here. Contain source of information that help with your question and answer</p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+      </div>
+    
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">New</strong>
+              <h3 class="mb-0">Featured post</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">How to use "xfab_connect_lib library in cadence environment ?</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">Post title</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row g-5">
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            From the search
+          </h3>
+    
+          <article class="blog-post">
+            <h2 class="blog-post-title mb-1">Topic</h2>
+            <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+    
+            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+            <hr>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            
+            <h2>Subject</h2>
+            <p>This is an example blockquote in action:</p>
+            <blockquote class="blockquote">
+              <p>Quoted text goes here.</p>
+            </blockquote>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            
+            <h3>Question</h3>
+            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
+            <ul>
+              <li>First list item</li>
+              <li>Second list item with a longer description</li>
+              <li>Third list item to close it out</li>
+            </ul>
+            <p>And this is an ordered list:</p>
+            <ol>
+              <li>First list item</li>
+              <li>Second list item with a longer description</li>
+              <li>Third list item to close it out</li>
+            </ol>
+            <p>And this is a definition list:</p>
+            <dl>
+              <dt>HyperText Markup Language (HTML)</dt>
+              <dd>The language used to describe and define the content of a Web page</dd>
+              <dt>Cascading Style Sheets (CSS)</dt>
+              <dd>Used to describe the appearance of Web content</dd>
+              <dt>JavaScript (JS)</dt>
+              <dd>The programming language used to build advanced Web sites and applications</dd>
+            </dl>
+            
+            <h2>Topic</h2>
+            <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+            <ul>
+              <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+              <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+              <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+              <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+              <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+              <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+            </ul>
+            <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+            
+            <h2>Answer</h2>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            <h3>Sub-heading</h3>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            <pre><code>Example code block</code></pre>
+            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+          </article>
+     
+          <nav class="blog-pagination" aria-label="Pagination">
+            <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+            <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+          </nav>
+    
+        </div>
+    
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3 bg-light rounded">
+              <h4 class="fst-italic">Ticket#63012359</h4>
+              <p class="mb-0">XS018</p>
+            </div>
+    
+            <div class="p-4">
+              <h4 class="fst-italic">Archives</h4>
+              <ol class="list-unstyled mb-0">
+                <li><a href="#">March 2021</a></li>
+                <li><a href="#">February 2021</a></li>
+                <li><a href="#">January 2021</a></li>
+                <li><a href="#">December 2020</a></li>
+                <li><a href="#">November 2020</a></li>
+                <li><a href="#">October 2020</a></li>
+                <li><a href="#">September 2020</a></li>
+                <li><a href="#">August 2020</a></li>
+                <li><a href="#">July 2020</a></li>
+                <li><a href="#">June 2020</a></li>
+                <li><a href="#">May 2020</a></li>
+                <li><a href="#">April 2020</a></li>
+              </ol>
+            </div>
+    
+            <div class="p-4">
+              <h4 class="fst-italic">Elsewhere</h4>
+              <ol class="list-unstyled">
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
     <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 my-5 border-top">
             <div class="col mb-3">

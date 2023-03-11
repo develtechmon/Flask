@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/fontawesome/css/all.min.css"> <!-- https://fontawesome.com/-->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/css/magnific-popup.css"> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/css/bootstrap.min.css">  <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/slick/slick.min.css">  <!-- https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/slick/slick-theme.css">  <!-- https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/css/templatemo-upright.css">
+    <!-- <link rel="stylesheet" href="/static/css/flexible-screenview.css"> -->
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/css/image-container.css">
+    <link rel="stylesheet" href="../../v1_0/Flask_Gate/static/css/sidebar.css">
+
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Leftside bar -->
+            <div id="tm-sidebar" class="tm-sidebar">
+                <nav class="tm-nav">
+                  <div id="main">
+                    <button class="navbar-toggler" type="button" onClick="openNav()" aria-label="Toggle navigation">
+                        <i class="fas fa-bars">
+                        </i>
+                    </button>
+                  </div>
+                  <div>
+                    <div id="mySidebar" class="sidebar">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+                      <li class="nav-item">
+                        <a href="/control" class="nav-link">
+                            <i class="fas fa-robot nav-icon"></i>
+                            Control
+                          </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a  href="/gallery" class="nav-link">
+                            <i class="fas fa-images nav-icon"></i>
+                            Gallery
+                          </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a href="/about" class="nav-link">
+                            <i class="fas fa-user-friends nav-icon"></i>
+                            About
+                          </a>
+                      </li>
+                     
+                      <li class="nav-item">
+                        <a href="/home" class="nav-link">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="https://github.com/develtechmon" class="nav-link external" target="_blank" rel="sponsored">
+                            <i class="fas fa-external-link-alt nav-icon"></i>
+                            External <a  target="_parent" rel="sponsored"></a>
+                        </a>
+                    </li>
+                    <footer class="mb-3 tm-mt-100">
+                        Development: <a href="https://github.com/develtechmon" target="_blank" rel="sponsored">v1.3</a>
+                    </footer>
+                    </div>
+                  </div>
+
+                    <script>
+                        function openNav() {
+                          document.getElementById("mySidebar").style.width = "230px";
+                          document.getElementById("main").style.marginLeft = "230px";
+                        }
+
+                        function closeNav() {
+                          document.getElementById("mySidebar").style.width = "0";
+                          document.getElementById("main").style.marginLeft= "0";
+                        }
+                      
+                    </script>
+
+                    <div>
+                        <div class="tm-brand-box">
+                            <h1 class="tm-brand">TechMon</h1>
+                        </div>
+                        <ul id="tm-main-nav">
+                            <li class="nav-item">
+                                <a href="/home" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-home nav-icon"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/control" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-robot nav-icon"></i>
+                                    Control
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  href="/gallery" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-images nav-icon"></i>
+                                    Gallery
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/about" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-user-friends nav-icon"></i>
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/home" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-envelope nav-icon"></i>
+                                    Contact
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/develtechmon" class="nav-link external" target="_blank" rel="sponsored">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-external-link-alt nav-icon"></i>
+                                    External <a  target="_parent" rel="sponsored"></a>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="mb-3 tm-mt-100">
+                        Development: <a href="https://github.com/develtechmon" target="_parent" rel="sponsored">v1.3</a>
+                    </footer>
+                </nav>
+            </div>
+
+            <div class="tm-main">
+                <div class="tm-section-wrap">
+                    
+
+<div class="tm-parallax" data-parallax="scroll"  ></div>
+<section id="about" class="tm-section">
+    <h2 class="tm-text-primary">About Gate Control System</h2>
+    <hr class="mb-5">
+    
+    <div class="row tm-row-about">
+        <div class="tm-col-about tm-col-about-l">
+            <p class="mb-4">
+            One of the main advantages of a remote control gate is convenience. You can open and close the gate without having to get out of your car or manually unlock and lock the gate.
+            A remote control gate can enhance the security of your property by preventing unauthorized access. You can control who enters and exits your property by only giving access to 
+            those with a remote control.
+            <p class="mb-4">
+            Remote control gates are easy to use and can be operated by anyone with a remote control. They are also low-maintenance and require minimal upkeep.  
+            </p>
+            <p class="mb-4">
+            Overall, remote control gates offer numerous benefits, making them a popular choice for homeowners and property managers looking to enhance security, 
+            convenience, and property value.
+            </p>
+        </div>
+
+        <div class="tm-col-about tm-col-about-r">
+            <img src="/static/img/gates.jpg" alt="Image" class="img-fluid mb-5 tm-img-about">
+    
+        </div>
+
+    </div>
+    <div class="mt-5">
+        <div class="tm-carousel">
+            <div class="tm-carousel-item">
+            
+                <div class="tm-about-text">
+                    <h4 class="tm-text-secondary tm-about-subtitle">Founder and CEO</h4>
+                </div>
+            </div>
+            
+            <div class="tm-carousel-item">
+                <figure class="effect-honey mb-4">
+                    <img src="/static/img/ysa/developer.jpg" alt="Featured Item">
+                    <figcaption>
+                        <ul class="tm-social">
+                            <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="tm-about-text">
+                    <h3 class="mb-3 tm-text-primary tm-about-title">Lukas Johnny</h3>
+                    <p> Associate Staff Engineer, experience in Embedded System , IOT and Machine Learning model development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                </div>
+            </div> <!-- .tm-main -->
+
+        </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
+    <script src="/static/js/jquery-3.4.1.min.js"></script>          <!-- https://jquery.com/ -->
+    <script src="/static/js/jquery.singlePageNav.min.js"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
+    <script src="/static/js/parallax/parallax.min.js"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ -->
+    <script src="/static/js/isotope.pkgd.min.js"></script>          <!-- https://isotope.metafizzy.co/ -->
+    <script src="/static/js/jquery.magnific-popup.min.js"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <script src="/static/js/send.data.to.rpi.js"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <script src="/static/slick/slick.min.js"></script>              <!-- https://kenwheeler.github.io/slick/ -->
+    <!-- <script src="/static/js/templatemo-script.js"></script>              https://kenwheeler.github.io/slick/ -->
+
+</body>
+</html>

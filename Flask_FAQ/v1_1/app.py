@@ -18,7 +18,7 @@ def home():
 def search():
     es = elastic()    
     es.connect()
-    res = es.search('xs018')
+    res = es.search('xt018')
     x = res['hits']['hits']
     
     if x !=None:

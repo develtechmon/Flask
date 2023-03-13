@@ -5,7 +5,7 @@ function display() {
 
   for (var i = 0; i < rows.length; i++) {
   rows[i].onclick = function(event) {
-      if (!event.target.matches("#ok")){event.preventDefault();}
+      if (!event.target.matches("#display")){event.preventDefault();}
       else{ 
       // Get the data from the clicked row
       var cells = this.getElementsByTagName("td");
@@ -38,6 +38,48 @@ function display() {
       });
   }}
 }
+
+function edit() {
+  var table = document.getElementById("userdata");
+  var rows = table.getElementsByTagName("tr");
+  var tickets, process, subject,question,topic,answer
+
+  for (var i = 0; i < rows.length; i++) {
+  rows[i].onclick = function(event) {
+      if (!event.target.matches("#edit")){event.preventDefault();}
+      else{ 
+      // Get the data from the clicked row
+      var cells = this.getElementsByTagName("td");
+      tickets  = cells[0].textContent;
+      process  = cells[1].textContent;
+      subject  = cells[2].textContent;
+      question = cells[3].textContent;
+      topic    = cells[4].textContent;
+      answer   = cells[5].textContent;
+      console.log(tickets,process,subject,question,topic,answer)
+      }
+      data = {
+              'tickets'  : tickets,
+              'process'  : process,
+              'subject'  : subject,
+              'question' : question,
+              'topic'    : topic,
+              'answer'   : answer
+              };
+    
+      $.ajax({
+      type: 'POST',
+      url: '/edit',
+      contentType: 'application/json',
+      data: JSON.stringify(data),
+      success: function(response) {
+          window.open(response.redirect_url, '_blank');
+      }
+      
+      });
+  }}
+}
+
 
 function reset(){
   var table = document.getElementById("userdata");

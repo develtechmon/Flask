@@ -1,8 +1,9 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
+import json
+
 class elastic:
-    
     def __init__(self):
         self.cert = "d05aaa8eba62fbb871cd966a29d0a9ba3336e29fbb6463deab015c1d985a246e"
         self.pwd  = "Eldernangkai92"
@@ -17,6 +18,29 @@ class elastic:
         else: print("Failed to connect")
         
     def search(self,data):
+        operator = []
+        operator.append(data)
+        
+        print(data)
+        for x in operator:
+            y = x.split()
+            
+            if 'and' in y:      
+                y.remove('and')
+                print(y)
+                
+                for z in y:
+                    print(z)
+
+                    return self.search_and(z)
+            
+            else:
+                return self.search_or(data)
+                            
+    def search_or(self,data):
+        # See Link https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/examples.html
+        # See link https://dylancastillo.co/elasticsearch-python/
+        print("OR")
         resp = self.es.search(
         index = "hotlinefaq",
         body={     
@@ -29,13 +53,102 @@ class elastic:
             },
         },    
         })
+
+        return (resp)
+                
+        #jsonString = json.dumps(resp['hits']['hits'])
+        ##jsonString = json.dumps(resp['hits'])
+
+        #jsonFile = open(r"D:\Flask\Flask_FAQ\v1_1\static\json\data.json","w")
+        #jsonFile.write(jsonString)
+        #jsonFile.close()
+
         
+        
+    def search_and(self,data):
+        print("AND")
+        # See Link https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/examples.html
+        # See link https://dylancastillo.co/elasticsearch-python/
+        resp = self.es.search(
+        index = "hotlinefaq",
+        body={     
+            "query": {
+            "multi_match": {
+            "query": data,
+            "fields": ["Process", "Customer", "Subject", "Description", "Topic"],
+            "operator": "and",
+            "type": "cross_fields"
+            },
+        },    
+        })
+                
+        # jsonString = json.dumps(resp['hits']['hits'])
+        # jsonFile = open(r"D:\Flask\Flask_FAQ\v1_1\static\json\data.json","w")
+        # jsonFile.write(jsonString)
+        # jsonFile.close()
+
         return (resp)
         
+    def update(self,tic, pro, cus, sub, top, des, sup):
+        # See Link https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/examples.html
+        doc = {
+            'Ticket' : tic,
+            'Process' : pro,
+            'Customer' : cus,
+            'Subject' : sub,
+            'Topic' : top,
+            'Description' : des,
+            'Support' : sup,
+        }
+        resp = self.es.update(index="hotlinefaq",id=127, doc=doc) 
+        
+    def add(self,tic, pro, cus, sub, top, des, sup):
+        # See Link https://www.elastic.co/guide/en/cloud/current/ec-getting-started-python.html
+        self.es.index(
+            index = "hotlinefaq",
+            document = {
+            'Ticket' : tic,
+            'Process' : pro,
+            'Customer' : cus,
+            'Subject' : sub,
+            'Topic' : top,
+            'Description' : des,
+            'Support' : sup,
+        }    
+        )
+            
+    def all(self):
+        resp = self.es.search(
+            index = "hotlinefaq",
+            body={
+                "query": {
+                    "match_all": {}
+                }
+            }
+        )
+               
+        value = resp['hits']['total']['value']
+        
+        return value
     
+    def refresh(self):
+        self.es.indices.refresh(index="hotlinefaq")
+        
 if __name__ == "__main__":
     init = elastic()
     init.connect()
     
-    resp = init.search('"XR013", "IO"')
-    print(resp)
+    #init.search('"XP018" "ESD"')
+    
+    #init.search_and("XR013")
+    
+    #init.search("XR013")
+    #init.update("00","xt018","lukas","esd","esd clamp","guideline","refer to guideline")
+    
+    #init.all()
+    
+    #init.add("00","xt018","james","esd","esd clamp","guideline","refer to guideline")
+
+        
+        
+        

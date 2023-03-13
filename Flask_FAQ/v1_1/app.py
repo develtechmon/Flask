@@ -18,7 +18,8 @@ def home():
 def search():
     es = elastic()    
     es.connect()
-    res = es.search('xt018')
+    res = es.search('xs018')
+    print(res)
     x = res['hits']['hits']
     
     if x !=None:
@@ -38,9 +39,9 @@ def search():
 def entry():
     return render_template('edit.html')
 
-@app.route('/edit')
-def edit():
-    return render_template('edit.html')
+# @app.route('/edit')
+# def edit():
+#     return render_template('edit.html')
 
 # @app.route('/display')
 # def display():
@@ -49,6 +50,32 @@ def edit():
 @app.route('/upload')
 def upload():
     return render_template('upload.html')
+
+@app.route('/edit', methods=['POST','GET'])
+def edit():
+    data = request.get_json()
+
+    '''
+    Method to send data to new page to open new tab
+    ticket = data['tickets']
+    process = data['process']
+    subject = data['subject']
+    '''
+    session['data'] = data
+
+    return jsonify({'redirect_url': url_for('revise')})
+
+@app.route('/revise')
+def revise():
+    data = session.get('data')
+    ticket   = data['tickets']
+    process  = data['process']
+    subject  = data['subject']
+    question = data['question']
+    topic    = data['topic']
+    answer   = data['answer']
+    print(subject.strip())
+    return render_template('edit.html',TICKET=ticket.strip(),PROCESS=process.strip(),SUBJECT=subject.strip(),QUESTION=question.strip(),TOPIC=topic.strip(),ANSWER=answer.strip()) 
 
 @app.route('/open', methods=['POST','GET'])
 def open():

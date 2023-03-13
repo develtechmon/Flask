@@ -1,118 +1,69 @@
 {% extends "base.html" %}
 {% block content %}
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FAQ</title>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ</title>
 
-    <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-  
-        .b-example-divider {
-          height: 3rem;
-          background-color: rgba(0, 0, 0, .1);
-          border: solid rgba(0, 0, 0, .15);
-          border-width: 1px 0;
-          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-  
-        .b-example-vr {
-          flex-shrink: 0;
-          width: 1.5rem;
-          height: 100vh;
-        }
-  
-        .bi {
-          vertical-align: -.125em;
-          fill: currentColor;
-        }
-  
-        .nav-scroller {
-          position: relative;
-          z-index: 2;
-          height: 2.75rem;
-          overflow-y: hidden;
-        }
-  
-        .nav-scroller .nav {
-          display: flex;
-          flex-wrap: nowrap;
-          padding-bottom: 1rem;
-          margin-top: -1px;
-          overflow-x: auto;
-          text-align: center;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
-        }
-    </style>
+  <!-- <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
 
-    <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+  <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
       }
-    }
 
-    .b-example-divider {
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
 
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-    </style>
-  </head>
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
 
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+  </style>
+
+  
+</head>
   <body>    
     
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -230,149 +181,144 @@
     </svg>
 
     <div class="container">
-        <main>
-          <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="../static/img/corner-graphics1.png" alt="" width="72" height="57">
-            <h2>Edit form</h2>
-            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-          </div>
-      
-          <div class="row g-5">
-            <div class="col-md-5 col-lg-4 order-md-last">
-              <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-primary">Data</span>
-                <span class="badge bg-primary rounded-pill">3</span>
-              </h4>
-              <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between lh-sm">
-                  <div>
-                    <h6 class="my-0">Product name</h6>
-                    <small class="text-muted">Brief description</small>
-                  </div>
-                  <span class="text-muted">$12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-sm">
-                  <div>
-                    <h6 class="my-0">Second product</h6>
-                    <small class="text-muted">Brief description</small>
-                  </div>
-                  <span class="text-muted">$8</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-sm">
-                  <div>
-                    <h6 class="my-0">Third item</h6>
-                    <small class="text-muted">Brief description</small>
-                  </div>
-                  <span class="text-muted">$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                  <div class="text-success">
-                    <h6 class="my-0">Promo code</h6>
-                    <small>EXAMPLECODE</small>
-                  </div>
-                  <span class="text-success">−$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>Total (USD)</span>
-                  <strong>$20</strong>
-                </li>
-              </ul>
-      
-              <form class="card p-2">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Promo code">
-                  <button type="submit" class="btn btn-secondary">Redeem</button>
-                </div>
-              </form>
-            </div>
-            <div class="col-md-7 col-lg-8">
-              <h4 class="mb-3">Information</h4>
-              <form class="needs-validation" novalidate>
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <label for="firstName" class="form-label">Tickets</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      Valid first name is required.
-                    </div>
-                  </div>
-      
-                  <div class="col-sm-6">
-                    <label for="lastName" class="form-label">Process</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      Valid last name is required.
-                    </div>
-                  </div>
-            
-                  <div class="col-12">
-                    <label for="email" class="form-label">Topic <span class="text-muted">(Optional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                    <div class="invalid-feedback">
-                      Please enter a valid email address for shipping updates.
-                    </div>
-                  </div>
-      
-                  <div class="col-12">
-                    <label for="address" class="form-label">Subject</label>
-                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                    <div class="invalid-feedback">
-                      Please enter your shipping address.
-                    </div>
-                  </div>
-      
-                  <div class="col-12">
-                    <label for="address2" class="form-label">Question<span class="text-muted">(Optional)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-                  </div>
-
-                  <div class="col-12">
-                    <label for="email" class="form-label">Topic <span class="text-muted">(Optional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                    <div class="invalid-feedback">
-                      Please enter a valid email address for shipping updates.
-                    </div>
-                  </div>
-      
-                  <div class="col-12">
-                    <label for="email" class="form-label">Answer <span class="text-muted">(Optional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                    <div class="invalid-feedback">
-                      Please enter a valid email address for shipping updates.
-                    </div>
-                  </div>
-
-                <hr class="my-4">
-      
-                <h4 class="mb-3">View</h4>
-      
-                <div class="my-3">
-                  <div class="form-check">
-                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-                    <label class="form-check-label" for="credit">Internal</label>
-                  </div>
-                  <div class="form-check">
-                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label class="form-check-label" for="debit">External</label>
-                  </div>
-                  <div class="form-check">
-                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label class="form-check-label" for="paypal">Public</label>
-                  </div>
-                </div>
-
-                <hr class="my-4">
-      
-                <button class="w-100 btn btn-primary btn-lg" type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-        </main>
-      
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="#">ESD</a>
+          <a class="p-2 link-secondary" href="#">Analog</a>
+          <a class="p-2 link-secondary" href="#">Digital</a>
+          <a class="p-2 link-secondary" href="#">Process Development</a>
+          <a class="p-2 link-secondary" href="#">Process Specifications</a>
+          <a class="p-2 link-secondary" href="#">Memory</a>
+          <a class="p-2 link-secondary" href="#">Cadence</a>
+          <a class="p-2 link-secondary" href="#">Mentor</a>
+          <a class="p-2 link-secondary" href="#">Models</a>
+          <a class="p-2 link-secondary" href="#">OPTO</a>
+          <a class="p-2 link-secondary" href="#">Reliability</a>
+          <a class="p-2 link-secondary" href="#">MEMS</a>
+        </nav>
       </div>
-      
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
-    <script src="checkout.js"></script>
+    </div>
+    
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Hotline Wikipedia</h1>
+          <p class="lead my-3">Find your information here. Contain source of information that help with your question and answer</p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+      </div>
         
+     <div class="row g-5">
+        <div class="col-md-8">
+  
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          </h3>
+
+          <p class="topic pb-4 mb-4 fst-italic border-bottom">Section: <a href="{{ url_for('search') }}">HTML / CSS</a></p>
+              
+          <article class="blog-post">
+
+            <h2 class="blog-post-title mb-1">Topic</h2>
+            <p class="blog-post-meta fst-italic">February 28, 2023 by <a href="#">Lukas</a></p>   
+            <blockquote class="blockquote">
+              <input style="text-align: justify; font-size: 16px; line-height: 1.5; " type="text" class="form-control fst-italic" name="topic" id="topic" placeholder="topic" value="">
+            </blockquote>
+            <hr>
+            
+            <script>
+              var d_topic = "{{ TOPIC }}";
+              document.getElementById('topic').value = d_topic;
+            </script>
+            
+            <h2>Subject</h2>
+            <div>
+                <textarea  style="text-align: justify; font-size: 16px;" type="text" class="form-control fst-italic" name="subject" id="subject" placeholder="subject" value=""></textarea>
+                <!-- <textarea  style="text-align: justify; font-size: 16px;" type="text" class="form-control fst-italic" name="subject" id="subject" placeholder="subject" value="">{{SUBJECT}}</textarea> -->
+            </div>
+            <script>             
+              var d_subject = "{{ SUBJECT }}";
+              document.getElementById('subject').value = d_subject;
+            </script>
+            
+            <span style="padding: 30px;"></span>
+
+            <h3>Question</h3>
+            <div>
+              <!-- <textarea  style="text-align: justify; font-size: 16px;" type="text" class="form-control fst-italic" name="question" id="question" placeholder="subject" value="">{{QUESTION}}</textarea> -->
+              <input style="text-align: justify; font-size: 16px; line-height: 1.5; " type="text" class="form-control fst-italic" name="question" id="question" placeholder="question" value="">
+            </div>
+            <script>
+              var d_question = "{{ QUESTION }}";
+              document.getElementById('question').value = d_question;
+            </script>
+
+            <span style="padding: 30px;"></span>
+
+            <h2>Answer</h2>
+            <div>
+              <textarea  style="text-align: justify; font-size: 16px;"  type="text" class="form-control fst-italic" name="answer" id="answer" placeholder="answer" value="">{{ANSWER}}</textarea>
+            </div>
+
+      
+            <!-- <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p> -->
+            <!-- <h3>Sub-heading</h3> -->
+            <!-- <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p> -->
+            <!-- <pre><code>Example code block</code></pre> -->
+            <!-- <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p> --> 
+          </article>
+
+          <span style="padding: 30px;"></span>
+   
+          <nav class="blog-pagination" aria-label="Pagination">
+            <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+            <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+          </nav>
+    
+        </div>
+    
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3 bg-light rounded">
+              <h4 class="fst-italic" id="ticket">Ticket#{{TICKET}}</h4>
+              <p class="mb-0"id="process">{{PROCESS}}</p>
+            </div>
+    
+            <div class="p-4">
+              <h4 class="fst-italic">Archives</h4>
+              <ol class="list-unstyled mb-0">
+                <li><a href="#">March 2021</a></li>
+                <li><a href="#">February 2021</a></li>
+                <li><a href="#">January 2021</a></li>
+                <li><a href="#">December 2020</a></li>
+                <li><a href="#">November 2020</a></li>
+                <li><a href="#">October 2020</a></li>
+                <li><a href="#">September 2020</a></li>
+                <li><a href="#">August 2020</a></li>
+                <li><a href="#">July 2020</a></li>
+                <li><a href="#">June 2020</a></li>
+                <li><a href="#">May 2020</a></li>
+                <li><a href="#">April 2020</a></li>
+              </ol>
+            </div>
+    
+            <div class="p-4">
+              <h4 class="fst-italic">Elsewhere</h4>
+              <ol class="list-unstyled">
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"76817ac2ca9e134e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.0","si":100}' crossorigin="anonymous"></script>
+
   </body>
-  {% endblock %}
+
+{% endblock %}
+
+
+  

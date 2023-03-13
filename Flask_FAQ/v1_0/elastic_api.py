@@ -14,7 +14,6 @@ class elastic:
             ssl_assert_fingerprint=self.cert,
             basic_auth=("elastic", self.pwd)  
         )
-        
         if self.es.ping(): print("Connected to server")  
         else: print("Failed to connect")
         

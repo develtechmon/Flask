@@ -66,6 +66,8 @@ class elastic:
         })
                 
         jsonString = json.dumps(resp['hits']['hits'])
+        #jsonString = json.dumps(resp['hits'])
+
         jsonFile = open(r"D:\Flask\Flask_FAQ\v1_0\static\json\data.json","w")
         jsonFile.write(jsonString)
         jsonFile.close()
@@ -88,7 +90,7 @@ class elastic:
         })
                 
         jsonString = json.dumps(resp['hits']['hits'])
-        jsonFile = open("D:\Flask\Flask_FAQ\v1_0\static\json\data.json","w")
+        jsonFile = open(r"D:\Flask\Flask_FAQ\v1_0\static\json\data.json","w")
         jsonFile.write(jsonString)
         jsonFile.close()
         
@@ -141,10 +143,11 @@ if __name__ == "__main__":
     init = elastic()
     init.connect()
     
-    #init.search('"XP018" "ESD"')
+    init.search('"XP018" "ESD"')
     
     #init.search_and("XR013")
     
+    #init.search("XR013")
     #init.update("00","xt018","lukas","esd","esd clamp","guideline","refer to guideline")
     
     #init.all()

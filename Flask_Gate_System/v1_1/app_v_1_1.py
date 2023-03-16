@@ -30,7 +30,7 @@ if __name__ == '__main__':
     #app.run(host='192.168.195.190', port=80, threaded=True)
 
     # Using 0 address to at port 80 to accept any incoming data in this pipeline
-    app.run(host='0.0.0.0', port=80)
+    #app.run(host='0.0.0.0', port=80)
 
     # Just run
-    # app.run()
+    app.run()

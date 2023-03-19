@@ -5,20 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Headers · Bootstrap v5.3</title>
 
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="../static/fontawesome/css/all.min.css">
+    <link href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}" rel="stylesheet">
+
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/masonry/">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
     <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
     <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
     <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
@@ -29,7 +26,7 @@
     <!-- <link rel="stylesheet" href="../../../Flask_Gate_System/v1_0/Flask_Gate/static/css/magnific-popup.css"> -->
     <!-- <link rel="stylesheet" href="../../../Flask_Gate_System/v1_0/Flask_Gate/static/css/bootstrap.min.css">  -->
     <!-- <link rel="stylesheet" href="../../../Flask_Gate_System/v1_0/Flask_Gate/static/slick/slick.min.css">  -->
-    <link rel="stylesheet" href="../../../Flask_Gate_System/v1_0/Flask_Gate/static/slick/slick-theme.css">  
+    <link href="{{ url_for('static', filename='slick/slick-theme.css') }}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../../../Flask_Gate_System/v1_0/Flask_Gate/static/css/templatemo-upright.css"> -->
 
     <style>
@@ -143,7 +140,6 @@
   </symbol>
 </svg>
 
-
   <main class="container py-5">
 
     <div class="row" data-masonry='{"percentPosition": true }'>
@@ -151,11 +147,10 @@
         <div class="card">
           <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
           <!-- <img src="https://source.unsplash.com/1600x500?arduino" class="d-block" w="100%" height="200" alt="..."> -->
-          <img src="../static/img/ysa/ysa_a.jpg" class="d-block" w="100%" height="100%" alt="...">
-
+          <img src="{{ url_for('static', filename='img/ysa/ysa_a.jpg') }}" class="d-block" w="100%" height="100%" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title that wraps to a new line</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">Moses 7:18</h5>
+            <p class="card-text">18 And the Lord called his people Zion, because they were of one heart and one mind, and dwelt in righteousness; and there was no poor among them.</p>
           </div>
         </div>
       </div>
@@ -163,16 +158,14 @@
       <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card">
               <!-- <img src="https://source.unsplash.com/1600x500?raspberrypi" class="d-block" w="100%" height="200" alt="..."> -->
-              <img src="../static/img/ysa/ysa_b.jpg" class="d-block" w="100%" height="100%" alt="...">
-
+              <img src="{{ url_for('static', filename='img/ysa/ysa_b.jpg') }}" class="d-block" w="100%" height="100%" alt="...">
             </div>
       </div>
 
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="card">
           <!-- <img src="https://source.unsplash.com/1600x500?robotic" class="d-block" w="100%" height="265" alt="..."> -->
-          <img src="../static/img/ysa/ysa_women.jpg" class="d-block" w="100%" height="100%" alt="...">
-
+          <img src="{{ url_for('static', filename='img/ysa/ysa_women.jpg') }}" class="d-block" w="100%" height="100%" alt="...">
         </div>
       </div>
 
@@ -180,10 +173,10 @@
         <div class="card text-bg-primary text-center p-3">
           <figure class="mb-0">
             <blockquote class="blockquote">
-              <p>A well-known quote, contained in a blockquote element.</p>
+              <p>“That they all may be one as thou, Father, art in me, and I in thee, that they also may be one in us”</p>
             </blockquote>
             <figcaption class="blockquote-footer mb-0 text-white">
-              Someone famous in <cite title="Source Title">Source Title</cite>
+              John <cite title="Source Title">17:21</cite>
             </figcaption>
           </figure>
         </div>
@@ -193,11 +186,10 @@
         <div class="card">
           <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
           <!-- <img src="https://source.unsplash.com/1600x500?coding" class="d-block" w="100%" height="200" alt="..."> -->
-          <img src="../static/img/ysa/ysa_c.jpg" class="d-block" w="100%" height="100%" alt="...">
-
+          <img src="{{ url_for('static', filename='img/ysa/ysa_c.jpg') }}" class="d-block" w="100%" height="100%" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title that wraps to a new line</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">Ephesians 2:19</h5>
+            <p class="card-text">Church activities bring Church members and others together as “fellowcitizens with the saints”</p>
           </div>
         </div>
       </div>
@@ -205,14 +197,13 @@
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="card">
           <!-- <img src="https://source.unsplash.com/1600x500?3D printer" class="d-block" w="100%" height="260" alt="..."> -->
-          <img src="../static/img/ysa/ysa.jpg" class="d-block" w="100%" height="100%" alt="...">
-
+          <img src="{{ url_for('static', filename='img/ysa/ysa.jpg') }}" class="d-block" w="100%" height="100%" alt="...">
         </div>
       </div>
 
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="card">
-          <img src="../static/img/ysa/ysa_e.jpg" class="d-block" w="100%" height="100%" alt="...">
+          <img src="{{ url_for('static', filename='img/ysa/ysa_e.jpg') }}" class="d-block" w="100%" height="100%" alt="...">
         </div>
       </div>
     </div>

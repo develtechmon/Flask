@@ -1,5 +1,5 @@
-from flask import Flask, request
-#from rpi_relay import *
+from flask import Flask, redirect, url_for,request,render_template, Response
+from rpi_relay import *
 
 app = Flask(__name__)
 
@@ -27,21 +27,21 @@ def api():
     for key, value in data.items():
         print(key)
     
-    #rpi_relay(key)
+    rpi_relay(key)
     
     resp = f"""Church Gate: {key}"""
-    
-    return resp
+    return redirect("http://develtechmon.pythonanywhere.com/control", code=302)
+    #return resp
 
 if __name__ == '__main__':
     # Using IP Zerotier IP address at port 80
-    #app.run(host='192.168.195.230', port=80)
+    app.run(host='192.168.195.230', port=80)
 
     # Using 0 address to at port 80 to accept any incoming data in this pipeline
     #app.run(host='0.0.0.0', port=80)
 
     # Office
-    app.run(host='10.60.215.170', port=80)
+    #app.run(host='10.60.215.170', port=80)
 
     # Visitor
     #app.run(host='192.168.195.190',port=80)

@@ -180,7 +180,7 @@
 
                         // To send single data
                         xhttp.send("open");
-                    });
+                      });
                         
                     } else {
                         // alert("Command Cancelled");
@@ -211,9 +211,32 @@
   
                   if (response) {
                       // alert("Command Sent");
-                      const form = document.getElementById("Pause");
+                      // const form = document.getElementById("Pause");
                       // form.action = "http://192.168.195.190:80/api";
-                      form.action = "http://10.60.215.170:80/api";
+                      // form.action = "http://10.60.215.170:80/api";
+
+                      var url = "http://10.60.215.170:80/api"
+                        document.getElementById("Pause").addEventListener("submit", function(event) {
+                        // prevent the form from submitting in the usual way
+                        event.preventDefault();
+                        
+                        // make AJAX request to submit form data in the background
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            // handle the response from the server, if necessary
+                            console.log(this.responseText);
+                        }
+                        };
+                        xhttp.open("POST", url, true);
+                        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        
+                        // To send multiple data
+                        //xhttp.send("param1=OPEN&param2=open");
+
+                        // To send single data
+                        xhttp.send("pause");
+                      });
 
                   } else {
                       // alert("Command Cancelled");
@@ -244,9 +267,32 @@
     
                     if (response) {
                         // alert("Command Sent");
-                        const form = document.getElementById("Close");
+                        // const form = document.getElementById("Close");
                         // form.action = "http://192.168.195.190:80/api";
-                        form.action = "http://10.60.215.170:80/api";
+                        // form.action = "http://10.60.215.170:80/api";
+
+                        var url = "http://10.60.215.170:80/api"
+                        document.getElementById("Close").addEventListener("submit", function(event) {
+                        // prevent the form from submitting in the usual way
+                        event.preventDefault();
+                        
+                        // make AJAX request to submit form data in the background
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            // handle the response from the server, if necessary
+                            console.log(this.responseText);
+                        }
+                        };
+                        xhttp.open("POST", url, true);
+                        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        
+                        // To send multiple data
+                        //xhttp.send("param1=OPEN&param2=open");
+
+                        // To send single data
+                        xhttp.send("close");
+                      });
 
                     } else {
                         // alert("Command Cancelled");

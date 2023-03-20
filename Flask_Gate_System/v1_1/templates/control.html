@@ -153,11 +153,38 @@
                     const response = confirm("Do you want to send this key ?");
     
                     if (response) {
-                        alert("Command Sent");
-                        const form = document.getElementById("Open");
-                        form.action = "http://192.168.195.190:80/api";
+                        //1st Method
+                        // alert("Command Sent");
+                        // const form = document.getElementById("Open");
+                        // form.action = "http://192.168.195.190:80/api";
+                        // form.action = "http://10.60.215.170:80/api";
+
+                        var url = "http://10.60.215.170:80/api"
+                        document.getElementById("Open").addEventListener("submit", function(event) {
+                        // prevent the form from submitting in the usual way
+                        event.preventDefault();
+                        
+                        // make AJAX request to submit form data in the background
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            // handle the response from the server, if necessary
+                            console.log(this.responseText);
+                        }
+                        };
+                        xhttp.open("POST", url, true);
+                        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        
+                        // To send multiple data
+                        //xhttp.send("param1=OPEN&param2=open");
+
+                        // To send single data
+                        xhttp.send("open");
+                    });
+                        
                     } else {
-                        alert("Command Cancelled");
+                        // alert("Command Cancelled");
+                        pass
                     }
                 }
               </script>
@@ -183,11 +210,14 @@
                   const response = confirm("Do you want to send this key ?");
   
                   if (response) {
-                      alert("Command Sent");
+                      // alert("Command Sent");
                       const form = document.getElementById("Pause");
-                      form.action = "http://192.168.195.190:80/api";
+                      // form.action = "http://192.168.195.190:80/api";
+                      form.action = "http://10.60.215.170:80/api";
+
                   } else {
-                      alert("Command Cancelled");
+                      // alert("Command Cancelled");
+                      pass
                   }
               }
             </script>
@@ -213,11 +243,14 @@
                     const response = confirm("Do you want to send this key ?");
     
                     if (response) {
-                        alert("Command Sent");
+                        // alert("Command Sent");
                         const form = document.getElementById("Close");
-                        form.action = "http://192.168.195.190:80/api";
+                        // form.action = "http://192.168.195.190:80/api";
+                        form.action = "http://10.60.215.170:80/api";
+
                     } else {
-                        alert("Command Cancelled");
+                        // alert("Command Cancelled");
+                        pass
                     }
                 }
               </script>

@@ -9,32 +9,35 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item">
-            <img src="https://source.unsplash.com/1600x500?Semiconductor" class="d-block w-100" alt="...">
+            <!-- <img src="https://source.unsplash.com/1600x500?Semiconductor" class="d-block w-100" alt="..."> -->
+            <img src="{{ url_for('static', filename='img/Banner_1.jfif') }}" class="d-block w-100" alt="...">
             <div class="container">
               <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                <h1>Got a question ?</h1>
+                <p>Search our database for answer</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Search now</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://source.unsplash.com/1600x500?Microelectronic" class="d-block w-100" alt="...">
+            <!-- <img src="https://source.unsplash.com/1600x500?Microelectronic" class="d-block w-100" alt="..."> -->
+            <img src="{{ url_for('static', filename='img/Banner_2.jfif') }}" class="d-block w-100" alt="...">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                <h1>Can't find answer you're looking for ?</h1>
+                <p>We've got you covered to help you out</p>
                 <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item active">
-            <img src="https://source.unsplash.com/1600x500?Microelectronic" class="d-block w-100" alt="...">
+            <!-- <img src="https://source.unsplash.com/1600x500?Microelectronic" class="d-block w-100" alt="..."> -->
+            <img src="{{ url_for('static', filename='img/Banner_3.jfif') }}" class="d-block w-100" alt="...">
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
-                <p>Some representative placeholder content for the third slide of this carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                <h1>Welcome to Hotline Wikipedia</h1>
+                <p>If you have a question about X-Fab, you're in the right place</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Search now</a></p>
               </div>
             </div>
           </div>
@@ -58,9 +61,11 @@
             </div>
             <div>
               <h3 class="fs-2">Search</h3>
-              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-              <a href="#" class="btn btn-primary">
-                Primary button
+              <p>One click away to search for required information. User have the flexibility to
+                use logical keyword search such as "and", "or" to recursively fetch the data with any matching keyword
+              </p>
+              <a href="{{ url_for('search') }}" class="btn btn-primary">
+                Search Button
               </a>
             </div>
           </div>
@@ -69,10 +74,12 @@
               <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
             </div>
             <div>
-              <h3 class="fs-2">Edit</h3>
-              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-              <a href="#" class="btn btn-primary">
-                Primary button
+              <h3 class="fs-2">Edit and Add</h3>
+              <p>One click away to contribute your input. This function serve the purpose to enable the user to add their FAQ information and
+                revise the data to ensure it is always the latest information.
+              </p>
+              <a href="{{ url_for('revise') }}" class="btn btn-primary">
+                Edit & Add Button
               </a>
             </div>
           </div>
@@ -82,16 +89,18 @@
             </div>
             <div>
               <h3 class="fs-2">Upload</h3>
-              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-              <a href="#" class="btn btn-primary">
-                Primary button
+              <p>One click away to upload your data. This function serve the purpose to allow user to drag and drop their CSV file for direct upload
+                into elastic search engine.
+              </p>
+              <a href="{{ url_for('upload') }}" class="btn btn-primary">
+                Upload Button
               </a>
             </div>
           </div>
         </div>
     </div> 
       
-    <div class="container" >
+    <!-- <div class="container" >
         <div class="row mb-2">
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -104,11 +113,6 @@
                 </div>
                 <div class="col-auto d-none d-lg-block">
                   <img class="bd-placeholder-img" width="200" height="250" src="https://source.unsplash.com/1600x500?Game" >
-                  <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                  </svg> -->
                 </div>
               </div>
             </div>
@@ -123,12 +127,11 @@
                 </div>
                 <div class="col-auto d-none d-lg-block">
                   <img class="bd-placeholder-img" width="200" height="250" src="https://source.unsplash.com/1600x500?Silicon" >
-                  <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                 </div>
               </div>
             </div>
           </div>
-    </div>
+    </div> -->
      
     <!-- <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">

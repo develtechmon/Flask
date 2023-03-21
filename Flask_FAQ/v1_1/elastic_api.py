@@ -1,12 +1,14 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
-
+import initialize as p
 import json
+
+key = p.initialize()
 
 class elastic:
     def __init__(self):
-        self.cert = "d05aaa8eba62fbb871cd966a29d0a9ba3336e29fbb6463deab015c1d985a246e"
-        self.pwd  = "Eldernangkai92"
+        self.cert = key.cert
+        self.pwd  = key.pwd
         
     def connect(self):
         self.es = Elasticsearch(
@@ -21,18 +23,18 @@ class elastic:
         operator = []
         operator.append(data)
         
-        print(data)
+        #print(data)
         for x in operator:
             y = x.split()
             
             if 'and' in y:      
                 y.remove('and')
-                print(y)
                 
-                for z in y:
-                    print(z)
-
-                    return self.search_and(z)
+                separator = ' '
+                data_and = separator.join(y)
+                print(data)
+            
+                return self.search_and(data_and)
             
             else:
                 return self.search_or(data)
@@ -41,13 +43,15 @@ class elastic:
         # See Link https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/examples.html
         # See link https://dylancastillo.co/elasticsearch-python/
         print("OR")
+
+        print(data)
         resp = self.es.search(
         index = "hotlinefaq",
         body={     
             "query": {
             "multi_match": {
             "query": data,
-            "fields": ["Process", "Customer", "Subject", "Description", "Topic"],
+            "fields": ["Process", "Customer", "Subject", "Description", "Topic", "Support"],
             "operator": "or",
             "type": "cross_fields"
             },
@@ -64,24 +68,25 @@ class elastic:
         #jsonFile.close()
 
         
-        
     def search_and(self,data):
         print("AND")
         # See Link https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/examples.html
         # See link https://dylancastillo.co/elasticsearch-python/
+
+        print(data)
         resp = self.es.search(
         index = "hotlinefaq",
         body={     
             "query": {
             "multi_match": {
             "query": data,
-            "fields": ["Process", "Customer", "Subject", "Description", "Topic"],
+            "fields": ["Process", "Customer", "Subject", "Description", "Topic","Support"],
             "operator": "and",
             "type": "cross_fields"
             },
         },    
         })
-                
+
         # jsonString = json.dumps(resp['hits']['hits'])
         # jsonFile = open(r"D:\Flask\Flask_FAQ\v1_1\static\json\data.json","w")
         # jsonFile.write(jsonString)

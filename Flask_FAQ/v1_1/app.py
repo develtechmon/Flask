@@ -19,7 +19,7 @@ def search():
     es = elastic()    
     es.connect()
     res = es.search('xs018')
-    print(res)
+    #print(res)
     x = res['hits']['hits']
     
     if x !=None:
